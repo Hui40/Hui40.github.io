@@ -1,3 +1,3 @@
-var posts=["文章/网站导航/","文章/自我介绍/"];function toRandomPost(){
+var posts=["文章/从零开始学会如何使用Codex/","文章/网站导航/","文章/自我介绍/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
