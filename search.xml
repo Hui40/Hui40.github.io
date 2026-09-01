@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>如何从电脑上卸载软件</title>
+      <link href="/%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E4%BB%8E%E7%94%B5%E8%84%91%E4%B8%8A%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6/"/>
+      <url>/%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E4%BB%8E%E7%94%B5%E8%84%91%E4%B8%8A%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="开头"><a href="#开头" class="headerlink" title="开头"></a>开头</h1><p><strong>“明明空间不够了，为什么我删了几个大软件，C盘还是飘红？”</strong><br><strong>“为什么我把桌面的图标删了，开机它还是自己弹出来？”</strong><br><strong>“为什么我把整个文件夹拖进回收站了，想重装却总是失败？”</strong></p><p>如果你在使用电脑的时候，也曾出现过以上的问题，那么请先深呼吸，放轻松——<strong>电脑没坏，你也没手残，你只是在卸载软件的时候用错了方法。</strong></p><p>很多小白朋友对“卸载软件”这件事有一个根深蒂固的误解：<strong>把“删除快捷方式”等同于“卸载程序”。</strong></p><p>这个误解的代价是巨大的。</p><ul><li><p><strong>当你只删快捷方式时</strong>，软件本体依然在硬盘里安然无恙，占着你的内存，甚至还在后台偷偷自启，拖慢开机速度。</p></li><li><p><strong>当你暴力删除文件夹时</strong>，相当于把一棵树的树干砍了，但树根（注册表和驱动）还深深扎在 Windows 的系统土壤里。这不仅会让系统变“脏”，更会在你下次安装同款软件时，因为旧根未除而导致安装直接报错。</p></li></ul><p>别看“卸载”两个字说起来轻巧，这背后其实藏着 Windows 系统最基础、但最容易被忽略的文件管理逻辑。</p><p>本期文章将教大家如何用正确的方式删除、卸载掉电脑里那些你不想要的软件，也教大家如何将软件删得更干净。</p><h1 id="教学内容"><a href="#教学内容" class="headerlink" title="教学内容"></a>教学内容</h1><p>卸载电脑软件的方式有很多，但绝对不是像手机一样将软件图标拖进回收站这么简单的，所以本期就教大家四种方式卸载电脑上的软件，前两种是windows自带的卸载程序，能有效地卸载软件，但卸的并不干净，后两种是第三方卸载软件的应用程序，可以在最大程度上删除掉软件在电脑上留下的所有痕迹，所以我推荐大家卸载软件的时候使用后两种方法，这样较为简单，且更有效。</p><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><ul><li><p>单击键盘上的<strong>win键</strong>或者点击任务栏中的<strong>windows图标</strong>，点击<strong>设置</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANfapQzSMHzMsYNmSbnNa263t74qqQAApISaxso2qBUaAcJprP1ppwBAAMCAAN5AAM9BA" alt="compressO-屏幕截图 2026-08-30 214130.png"></p></li><li><p>找到并点击“<strong>应用</strong>”一栏<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANgapQ0d01H0bVmEd0mm_xpWnW0u-wAApYSaxso2qBUOpWvlv-UF3UBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-08-30 214642.png"></p></li><li><p>点击“<strong>安装的应用</strong>”<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANhapQ003CeX6vXyZJ52vH82nFvJTQAApcSaxso2qBU0eqtaKDEE9gBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-08-30 214822.png"></p></li><li><p>找到你想卸载的软件，这里我们以<strong>汽水音乐</strong>为例，点击该应用所在的一栏的最右边的<strong>三个点</strong>，然后点击<strong>卸载</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANiapQ1lU5IAAEDep9RPwABLap84uLKmwACmBJrGyjaoFQVwnGVP2q2zgEAAwIAA3cAAz0E" alt="compressO-屏幕截图 2026-08-30 215047.png"></p></li><li><p>继续点击<strong>卸载</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANjapQ2LkJsjYvs1UehS3nJaNVyX_8AApkSaxso2qBUbIhE9PDItroBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-08-30 215403.png"></p></li><li><p>然后你便进入了该软件的<strong>卸载程序</strong>，这里我们点击<strong>卸载</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANkapQ2n9h0Wnx0OTMNsOtpPsXhf0YAApoSaxso2qBUiXUExlMKcOIBAAMCAAN4AAM9BA" alt="compressO-屏幕截图 2026-08-30 215610.png"></p></li><li><p>卸载完成了，我们点击<strong>完成</strong>，一次简单的卸载软件操作便<strong>执行成功</strong>了<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANlapQ3GoHymooLhUY2G1FAjRWO_3oAApwSaxso2qBU0bSz004lQEEBAAMCAAN4AAM9BA" alt="compressO-屏幕截图 2026-08-30 215800.png"></p></li></ul><h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>该方法需要用到<strong>控制面板</strong>，如果你<strong>不知道控制面板怎么打开</strong>或者桌面上<strong>没有控制面板的图标</strong>，请<strong>展开以下内容</strong>查看如何把控制面板放到桌面👇👇👇</p><details class="folding-tag" green><summary> 点击展开查看详细步骤 </summary>              <div class='content'>              <ul><li><p>用跟刚才一样的方法打开电脑的设置界面，找到并点击“<strong>个性化</strong>”一栏<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANmapQ6PdQ6Z-zc9fjkR6laVShRevUAAqESaxso2qBUAWdvb-ja5OYBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-08-30 221119.png"></p></li><li><p>找到并点击“<strong>主题</strong>”一栏<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANnapQ7mFVkW13-Awnq9CTbqBzkFqsAAqUSaxso2qBUiSSs_KPRwSUBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-08-30 221710.png"></p></li><li><p>点击<strong>桌面图标设置</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANoapQ8BD-419_iKDLviufY0Xn4sfgAAqoSaxso2qBUGSK9g4cZEFQBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-08-30 221852.png"></p></li><li><p>在打开的界面中把<strong>控制面板</strong>的选项勾上，随后<strong>点击确定并返回</strong>，你的桌面上就有控制面板图标了<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANpapQ8gdiNkEmByT_7wiwmoRQjCtwAAqsSaxso2qBUrSMKbziaGMQBAAMCAAN5AAM9BA" alt="compressO-屏幕截图 2026-08-30 222100.png"></p></li></ul>              </div>            </details><ul><li><p>在桌面上找到并双击点开<strong>控制面板</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANqapQ9hTN4YWlOzlHg0cMzUsVOKD4AAq0Saxso2qBUp3bZKJRy3zMBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-08-30 222428.jpg"></p></li><li><p>在右上角将查看方式改成<strong>类别</strong>，然后在<strong>程序类别</strong>点击<strong>卸载程序</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANrapQ-X3s_PAEU7YDy5rClUgABS0PZAAKuEmsbKNqgVHbXpI7yjAnbAQADAgADdwADPQQ" alt="compressO-屏幕截图 2026-08-30 222801.jpg"></p></li><li><p>找到你要卸载的程序，右键并点击卸载，或者直接双击它<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANsapQ_nWlEkY_1Pq8hoimnF4WTuTcAArISaxso2qBUo5SRH4aL0yEBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-08-30 223400.png"></p></li><li><p>这时我们发现又弹出了软件的卸载程序，之后用与之前相同的操作步骤卸载该软件即可<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANtapQ_-JNoLN1KaVpNe-A-h_YQZZkAArMSaxso2qBUI1Ls0NlOI24BAAMCAAN4AAM9BA" alt="compressO-屏幕截图 2026-08-30 223609.png"></p></li></ul><h2 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h2><ul><li><p>点此链接👉<a href="https://geekuninstaller.com/download">Geek Uninstaller</a>，进入知名第三方卸载软件<strong>Geek Uninstaller</strong>的下载界面，然后点击带<strong>ZIP标识</strong>的按钮（当然<strong>7Z标识</strong>的按钮也行，这里以前者为例）<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANuapWKtymf3Bpdj1apCPBo71J5rqoAAg4Waxso2qhUPntW7rbMo7YBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-08-31 220620.png"></p></li><li><p>文件下载下来之后，鼠标单击选择该文件，然后点击鼠标右键，选择你常用的<strong>压缩软件</strong>对其进行<strong>解压</strong>，这里以我常用的<strong>Bandizip</strong>为例，具体步骤如下<br>注：如果你的电脑上没装压缩软件或者说压缩软件是需要收费的盗版软件，请点此链接下载<strong>Bandizip压缩软件</strong>👉<a href="https://www.bandisoft.com/bandizip/">Bandizip官网链接</a>（下载免费版即可）<br>若不知道如何下载软件，请跳转到此链接跟慧妈学习<strong>如何下载安装软件</strong>👉<a href="https://huimanb.top/%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6/">如何下载软件</a><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANvapWMAAH2rj0MYa4AAUkIR3kzqGMtpAACDxZrGyjaqFSbSwaLPegxPgEAAwIAA3cAAz0E" alt="compressO-屏幕截图 2026-08-31 221127.png"></p></li><li><p>解压之后，鼠标单击选择刚刚进行解压的<strong>压缩包</strong>，按住键盘上的<kbd>Ctrl</kbd> + <kbd>D</kbd>，将此文件删除，然后鼠标单击选择你刚刚<strong>解压下来的文件</strong>，及<strong>geek.exe</strong>，按住键盘上的<kbd>Ctrl</kbd> + <kbd>X</kbd>，剪切其文件，然后选择并打开你一个用于安装软件的文件夹，文件夹名字<strong>最好为英文</strong>，按住键盘上的<kbd>Ctrl</kbd> + <kbd>V</kbd>，将文件粘贴到该文件夹中<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANwapWP_37EZRgSDg9HpnYn_PoKYhEAAhkWaxso2qhU5st0yoEUd34BAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-08-31 222301.png"></p></li><li><p>如果你需要更快捷地打开此文件的话，可以建立该文件的<strong>快捷方式</strong>，将快捷方式保存到桌面，这样就可以在桌面打开此卸载程序了。选中该文件后点击鼠标右键，然后点击<strong>显示更多选项</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANxapWQr_x_prfbTVtcdlp0MsO8JN4AAhoWaxso2qhUAeCi_FdAp8YBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-08-31 223221.png"></p></li><li><p>点击<strong>创建快捷方式</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANyapWSENF5CGw6ti6SAleZVVJXLmUAAh8Waxso2qhU301RrQha5wcBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-08-31 223807.png"></p></li><li><p>然后用与刚才类似的方式将文件夹中新出现的快捷方式<strong>剪切并粘贴到桌面上去</strong>，随后在桌面上像平时打开其他软件一样<strong>双击此图标</strong>打开该软件<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANzapWS6rzWr4FWaOTjfLlEbFScFgcAAiAWaxso2qhU3-dzFJEdGMwBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-08-31 224143.jpg"></p></li><li><p>点击“<strong>是</strong>”<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAN0apWTl0jnTiFf9wxofuSh7I8Z6DEAAiEWaxso2qhUvflQoRCnGvcBAAMCAAN4AAM9BA" alt="compressO-屏幕截图 2026-08-31 224454.png"></p></li><li><p>出现软件列表界面之后，选择你要进行卸载的软件，<strong>右键</strong>，随后点击<strong>卸载</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAN1apWUH_4oFXyQWc0ayrFQA4TuszoAAigWaxso2qhUP42hajIVa70BAAMCAAN5AAM9BA" alt="compressO-屏幕截图 2026-08-31 224652.png"></p></li><li><p>此时软件的卸载程序出现，用相同的方式操作卸载该软件<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAN2apWUop4ZfClIuqmu4AUxIeLSnq0AAikWaxso2qhUKFF6_XB7WZQBAAMCAAN4AAM9BA" alt="compressO-屏幕截图 2026-08-31 224943.png"></p></li><li><p>执行相应操作走完了软件自身卸载程序的卸载流程之后，此时第三方卸载程序会<strong>扫描该软件的残留文件及其注册表</strong>，扫描完毕之后，我们点击<strong>完成</strong>，该软件就算是<strong>被删干净了</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAN3apWVeL4MgG59mwnUDHYkieQ4_QQAAisWaxso2qhUnO16daE7GkYBAAMCAAN5AAM9BA" alt="compressO-屏幕截图 2026-08-31 225304.png"></p></li><li><p>那么问题来了，有的时候我们想卸载的是<strong>从微软商店下载的软件</strong>，或者是<strong>windows系统本身自带的软件</strong>，在这个软件列表上看不到，怎么办呢？不要慌，这时，我们点击上方的<strong>查看</strong>按钮，然后点击“<strong>Microsoft Store Apps</strong>”即可，这样就可以显示这些原来列表里看不到的软件了，那么怎么切回原来的状态呢？再次点击<strong>查看</strong>，然后点击“<strong>Desktop Apps</strong>”即可<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAN4apWWUb9JJ2Jnn7h0RUDy-5owP2oAAiwWaxso2qhUtz7wKQABZm7JAQADAgADeQADPQQ" alt="compressO-屏幕截图 2026-08-31 225629.png"></p></li></ul><h2 id="方法四"><a href="#方法四" class="headerlink" title="方法四"></a>方法四</h2><ul><li><p>点击此链接👉<a href="https://hibitsoft.ir/Uninstaller.html">Hibit Uninstaller</a>，跳转至软件<strong>Hibit Uninstaller</strong>的<strong>官网下载界面</strong>，然后点击<strong>Installable version</strong>按钮<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAN5apbeIAfcJBKyptqElJkHRZdJpYQAAuISaxty6rlUxXxFprWfdhwBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-09-01 221435.png"></p></li><li><p>软件的安装程序下载好后，打开此安装程序所在的下载文件夹，然后<strong>双击此安装程序</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAN6apbe6mvWgzs23b7p-jq3Cm_VnHAAAuYSaxty6rlUCSDtaTXqGxkBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-09-01 221855.png"></p></li><li><p>点击“<strong>是</strong>”<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAN7apbfYK9hSewT4ylQxBgExPvxDCAAAugSaxty6rlUtHMgYaeMGeoBAAMCAAN4AAM9BA" alt="compressO-屏幕截图 2026-09-01 222040.png"></p></li><li><p>随后按正常的流程走完安装程序即可<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAN8apbfq8zHRPCTJL_I8R_4iActJSAAAukSaxty6rlUPG_bGThMx_EBAAMCAAN4AAM9BA" alt="compressO-屏幕截图 2026-09-01 222210.png"></p></li><li><p>软件安装完毕之后，在桌面上找到此软件的快捷方式，然后双击此软件<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAN9apbgW4nRxIzcAro8lQirzG2vodQAAuoSaxty6rlUT7kjqEDYKGUBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-09-01 222424.jpg"></p></li><li><p>打开此软件之后，出现了已安装的软件的列表，随后在此列表中找到你想卸载的软件，<strong>单击选中</strong>，然后<strong>单击鼠标右键</strong>，随后点击<strong>卸载</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAN-apbhAWS8ZH3Z14jW031uV47dmG0AAu0Saxty6rlUjtSeiXWyAAFVAQADAgADdwADPQQ" alt="compressO-屏幕截图 2026-09-01 222708.png"></p></li><li><p>依旧按正常的卸载流程走完该软件自带的卸载程序<br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAN_apbhfBgP2NTPUL7Gcqe2a8iqbjoAAu8Saxty6rlUsFoHO13i1GkBAAMCAAN4AAM9BA" alt="compressO-屏幕截图 2026-09-01 222954.png"></p></li><li><p>软件卸载完成之后，会出现像这样的准备就绪的界面，<strong>点击高级扫描</strong>，然后<strong>点击扫描</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOAapbiLs5DQBmWeJww5cy7tjWMMywAAvMSaxty6rlUM6_1SSacAAHmAQADAgADeQADPQQ" alt="compressO-屏幕截图 2026-09-01 223114.jpg"></p></li><li><p>等待稍许，扫描完毕之后，将左下角的“<strong>清理后打开报告文件</strong>”和“<strong>创建备份</strong>”都保持为<strong>取消勾选</strong>状态，随后点击右下角的<strong>完成</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOBapbitfLU_E096f9PSCv4usI3JiUAAvQSaxty6rlUHXwjZcnC9xUBAAMCAAN3AAM9BA" alt="compressO-屏幕截图 2026-09-01 223447.jpg"></p></li><li><p>好的，这样一个软件就最大程度上地被删除干净了，还是同样的问题，如何删除微软商店安装的软件以及windows自带的软件？这时我们点击右上角的<strong>工具</strong>，然后点击<strong>Windows应用商店应用管理器</strong>，即可显示windows应用商店的软件，然后<strong>用相同的方式删除即可</strong><br><img src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOCapbjd1MqYf2t0F85t1eQjlMaDxMAAvgSaxty6rlUfCPTlWooLfwBAAMCAAN5AAM9BA" alt="compressO-屏幕截图 2026-09-01 223739.jpg"></p></li></ul><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>在用到后面两种方法提供的两种软件卸载程序的时候，请注意，<strong>不要随便删除windows自带的一些软件</strong>，除非你清楚地知道自己在干什么，而自己在微软商店上下载的软件，卸载了就卸载了，之后还能重新装回去，这点要<strong>区分清楚</strong>。</p><p>同时，<strong>Hibit Uninstaller</strong>是一款<strong>强大的、多功能的</strong>卸载软件，它除了把软件卸载干净之外，还可以为你提供<strong>清理电脑上的垃圾文件、空文件夹、注册表</strong>等等多种功能的服务，这些都在软件打开的界面的工具这一栏可以看到，但是，除非你对删除文件已经有了一定程度上的<strong>熟练度</strong>，并且<strong>清楚地知道自己在做什么</strong>，否则<strong>不要随便删除注册表</strong>，一旦删除错了，将对你的windows系统<strong>造成不可逆的损伤</strong>，这点要<strong>万分小心</strong>。</p><p>所以，慧妈非常推荐小白使用<strong>Hibit Uninstaller卸载软件</strong>，但也十分不推荐小白使用该软件的工具里的一些除卸载软件之外的其他的<strong>自己不明确的扩展功能</strong>，这点需<strong>谨慎使用</strong>，还请注意！</p><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>好了，以上便是本期教学的所有内容，想必小白朋友们看到这里，也该大致了解如何卸载电脑中下载安装的软件了吧？总不会像之前一样傻傻地将快捷方式拖进回收站，或者是直接将装有软件的文件夹删除了吧？如果这些内容你已全部掌握，恭喜你，学会了如何卸载软件🎉🎉🎉，与此同时，你又离电脑大神更近了一步，真是泰酷辣😊</p><p>最后，不要忘了<strong>关注</strong>慧妈，<strong>收藏</strong>此博客，我会在这上面更新更多教学内容。你们的<strong>关注</strong>与<strong>打赏</strong>是慧妈更新的<strong>最大动力</strong>😊</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教学内容 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教学 </tag>
+            
+            <tag> 持续更新 </tag>
+            
+            <tag> 干货满满 </tag>
+            
+            <tag> 小白必看 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何在电脑上安装卡巴斯基杀毒软件</title>
       <link href="/%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E5%AE%89%E8%A3%85%E5%8D%A1%E5%B7%B4%E6%96%AF%E5%9F%BA%E6%9D%80%E6%AF%92%E8%BD%AF%E4%BB%B6/"/>
       <url>/%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E5%AE%89%E8%A3%85%E5%8D%A1%E5%B7%B4%E6%96%AF%E5%9F%BA%E6%9D%80%E6%AF%92%E8%BD%AF%E4%BB%B6/</url>
@@ -22,13 +53,13 @@
             
             <tag> 教学 </tag>
             
-            <tag> 装机必备 </tag>
-            
-            <tag> 小白必看 </tag>
+            <tag> 安全上网 </tag>
             
             <tag> 干货满满 </tag>
             
-            <tag> 安全上网 </tag>
+            <tag> 装机必备 </tag>
+            
+            <tag> 小白必看 </tag>
             
         </tags>
       
@@ -55,13 +86,13 @@
             
             <tag> 教学 </tag>
             
-            <tag> 装机必备 </tag>
-            
-            <tag> 小白必看 </tag>
-            
             <tag> 持续更新 </tag>
             
             <tag> 干货满满 </tag>
+            
+            <tag> 装机必备 </tag>
+            
+            <tag> 小白必看 </tag>
             
         </tags>
       
@@ -88,11 +119,11 @@
             
             <tag> 教学 </tag>
             
-            <tag> 持续更新 </tag>
+            <tag> 软件下载 </tag>
             
             <tag> 安全上网 </tag>
             
-            <tag> 软件下载 </tag>
+            <tag> 持续更新 </tag>
             
         </tags>
       
@@ -119,9 +150,9 @@
             
             <tag> 教学 </tag>
             
-            <tag> 持续更新 </tag>
-            
             <tag> 软件下载 </tag>
+            
+            <tag> 持续更新 </tag>
             
             <tag> 常用工具 </tag>
             
@@ -136,7 +167,7 @@
       <link href="/%E6%96%87%E7%AB%A0/%E7%BD%91%E7%AB%99%E5%AF%BC%E8%88%AA/"/>
       <url>/%E6%96%87%E7%AB%A0/%E7%BD%91%E7%AB%99%E5%AF%BC%E8%88%AA/</url>
       
-        <content type="html"><![CDATA[<p>你是否也曾想下载一个干净软件，结果搜出一堆<strong>高速下载</strong>、<strong>立即体验</strong>，点下去却装上了五六个弹窗全家桶？😅</p><p>为了不让大家再踩这种坑，我整理了这份 <strong>「网站导航」</strong> ——收录常用必备软件的官方下载渠道、靠谱第三方来源，以及一些实用工具站点。所有链接亲测可用，力求安全、简洁、无套路。</p><p>本博文会<strong>持续更新</strong>，遇到新工具或旧链接失效，我会及时补上。也欢迎你留言补充，一起把这份导航变得更实用。<br><strong>收藏这篇，下次装软件直接从这里走，省心又安全。</strong> 🛡️</p><h1 id="游戏软件"><a href="#游戏软件" class="headerlink" title="游戏软件"></a>游戏软件</h1><ul><li><strong>steam</strong> : <a href="https://store.steampowered.com/about/">官网链接</a></li></ul><h1 id="视频播放器"><a href="#视频播放器" class="headerlink" title="视频播放器"></a>视频播放器</h1><ul><li><strong>Potplayer</strong> : <a href="https://potplayer.tv/?lang=zh_CN/">官网链接</a></li></ul><h1 id="压缩解压软件"><a href="#压缩解压软件" class="headerlink" title="压缩解压软件"></a>压缩解压软件</h1><ul><li><strong>Bandizip</strong> : <a href="https://www.bandisoft.com/bandizip/">官网链接</a></li><li><strong>7zip</strong> : <a href="https://www.7-zip.org/">官网链接</a></li></ul><h1 id="杀毒软件"><a href="#杀毒软件" class="headerlink" title="杀毒软件"></a>杀毒软件</h1><ul><li><strong>火绒安全</strong> : <a href="https://www.huorong.cn/">官网链接</a></li><li><strong>腾讯电脑管家</strong> : <a href="https://guanjia.qq.com/">官网链接</a></li><li><strong>卡巴斯基(付费软件)</strong> : <a href="https://www.kaspersky.com.cn/">官网链接</a></li><li><strong>迈克菲(付费软件)</strong> : <a href="https://www.mcafee.com/zh-cn/">官网链接</a></li><li><strong>360安全卫士(不建议使用)</strong> : <a href="https://www.360.cn/">官网链接</a></li></ul><p>注意：免费杀毒软件建议首选<strong>火绒</strong>，其次为<strong>腾讯电脑管家</strong>，如果你的电脑中了非常严重的病毒，前两个杀毒软件解决不了问题，请下载<strong>360安全卫士</strong>！解决问题之后记得卸载就行，360广告较多，不建议你在电脑上长期使用。</p><h1 id="卸载软件"><a href="#卸载软件" class="headerlink" title="卸载软件"></a>卸载软件</h1><ul><li><strong>geek</strong> : <a href="https://geekuninstaller.com/">官网链接</a></li><li><strong>Hibit Uninstaller</strong> : <a href="https://hibitsoft.ir/Uninstaller.html">官网链接</a></li></ul><p>如果你需要卸载软件，以上两款软件可以派上用场，他们可以最大程度上地将指定的软件卸载干净，包括其在你电脑里留存的数据包、注册表，都可以删除干净。其中，<strong>geek</strong>更加轻量化，占用电脑的储存空间更加小；而<strong>Hibit Uninstaller</strong>功能更加全面，除卸载软件之外，还可以帮你<strong>扫描</strong>并<strong>清理</strong>电脑中的<strong>注册表</strong>、<strong>垃圾文件</strong>、<strong>空文件夹</strong>等。</p><p>两款软件各有所长，想使用哪个看你自己的个人需求，不过慧妈还是更推荐你使用<strong>Hibit Uninstaller</strong>😊</p><h1 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h1><ul><li><p><strong>DashBeam</strong> : <a href="https://dashbeam.net/zh">官网链接</a><br>介绍：该软件用于远程传输大容量文件使用，比如你想给朋友传一部电影，但电影所占容量太大，如果用QQ传会超出其每天能传文件的大小的上限，如果用网盘传会被限速，这个时候便可以使用这款软件了；不过，如果传输的文件体积较小的话，还是建议首选用QQ传输，这样速度更快。</p></li><li><p><strong>图吧工具箱</strong> : <a href="https://www.tbtool.cn/">官网链接</a><br>介绍：该软件是电脑爱好者圈子必装的软件，里面包含了上百种检测工具，可以帮你一眼看透<strong>CPU</strong>、<strong>内存</strong>、<strong>硬盘</strong>等所有配件的真实型号，还能给电脑做<strong>压力测试</strong>，看它<strong>稳不稳</strong>、查<strong>硬盘</strong>有没有<strong>坏道</strong>。新买的电脑用它验货防被坑，旧电脑用它排查毛病，非常实用👍</p></li><li><p><strong>OBS</strong> : <a href="https://obsproject.com/">官网链接</a><br>介绍：该软件是一款<strong>免费</strong>、<strong>开源</strong>且<strong>功能强大</strong>的”<strong>直播录屏工作台</strong>“，它能把你电脑上的<strong>游戏画面</strong>、<strong>操作窗口</strong>、<strong>摄像头人像</strong>和<strong>麦克风声音</strong>全部都实时合成到一起，既可以直接推流到<strong>抖音</strong>、<strong>B站</strong>等平台做直播，也能一键录制成<strong>高清视频</strong>存到电脑里。</p></li><li><p><strong>UU远程</strong> : <a href="https://uuyc.163.com/">官网链接</a><br>介绍：该软件是一款可以远程操作电脑的软件，在所有国内知名的远程控制电脑的软件中，这款软件提供的<strong>免费服务</strong>更加<strong>优秀</strong>，可实现的功能有<strong>临时远程办公取文件</strong>、<strong>手机或平板操控电脑玩游戏</strong>、<strong>平板连接电脑当副屏</strong>、<strong>远程电脑协助</strong>等。总而言之，功能强大，且绝大多数核心功能完全<strong>免费</strong>，而且<strong>操作简单</strong>，胜过市面上绝大多数远程控制软件👍</p></li><li><p><strong>Everything</strong> : <a href="https://www.voidtools.com/zh-cn/downloads/">官网链接</a><br>介绍：该软件是一款<strong>完全免费</strong>、体积仅<strong>几兆</strong>的“<strong>Windows文件秒搜神器</strong>”，它能让你在输入关键词的瞬间，就从海量文件中<strong>精确定位</strong>到任何一个<strong>文档</strong>、<strong>图片</strong>或<strong>安装包</strong>，彻底告别系统自带的慢速转圈搜索。</p></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>你是否也曾想下载一个干净软件，结果搜出一堆<strong>高速下载</strong>、<strong>立即体验</strong>，点下去却装上了五六个弹窗全家桶？😅</p><p>为了不让大家再踩这种坑，我整理了这份 <strong>「网站导航」</strong> ——收录常用必备软件的官方下载渠道、靠谱第三方来源，以及一些实用工具站点。所有链接亲测可用，力求安全、简洁、无套路。</p><p>本博文会<strong>持续更新</strong>，遇到新工具或旧链接失效，我会及时补上。也欢迎你留言补充，一起把这份导航变得更实用。<br><strong>收藏这篇，下次装软件直接从这里走，省心又安全。</strong> 🛡️</p><h1 id="游戏软件"><a href="#游戏软件" class="headerlink" title="游戏软件"></a>游戏软件</h1><ul><li><strong>steam</strong> : <a href="https://store.steampowered.com/about/">官网链接</a></li></ul><h1 id="视频播放器"><a href="#视频播放器" class="headerlink" title="视频播放器"></a>视频播放器</h1><ul><li><strong>Potplayer</strong> : <a href="https://potplayer.tv/?lang=zh_CN/">官网链接</a></li></ul><h1 id="压缩解压软件"><a href="#压缩解压软件" class="headerlink" title="压缩解压软件"></a>压缩解压软件</h1><ul><li><strong>Bandizip</strong> : <a href="https://www.bandisoft.com/bandizip/">官网链接</a></li><li><strong>7zip</strong> : <a href="https://www.7-zip.org/">官网链接</a></li></ul><h1 id="杀毒软件"><a href="#杀毒软件" class="headerlink" title="杀毒软件"></a>杀毒软件</h1><ul><li><strong>火绒安全</strong> : <a href="https://www.huorong.cn/">官网链接</a></li><li><strong>腾讯电脑管家</strong> : <a href="https://guanjia.qq.com/">官网链接</a></li><li><strong>卡巴斯基(付费软件)</strong> : <a href="https://www.kaspersky.com.cn/">官网链接</a></li><li><strong>迈克菲(付费软件)</strong> : <a href="https://www.mcafee.com/zh-cn/">官网链接</a></li><li><strong>360安全卫士(不建议使用)</strong> : <a href="https://www.360.cn/">官网链接</a></li></ul><p>注意：杀毒软件建议首选<strong>卡巴斯基</strong>，其次为<strong>火绒</strong>，如果你的电脑中了非常严重的病毒，前两个杀毒软件解决不了问题，请下载<strong>360安全卫士</strong>！解决问题之后记得卸载就行，360广告较多，不建议你在电脑上长期使用。</p><h1 id="卸载软件"><a href="#卸载软件" class="headerlink" title="卸载软件"></a>卸载软件</h1><ul><li><strong>geek</strong> : <a href="https://geekuninstaller.com/">官网链接</a></li><li><strong>Hibit Uninstaller</strong> : <a href="https://hibitsoft.ir/Uninstaller.html">官网链接</a></li></ul><p>如果你需要卸载软件，以上两款软件可以派上用场，他们可以最大程度上地将指定的软件卸载干净，包括其在你电脑里留存的数据包、注册表，都可以删除干净。其中，<strong>geek</strong>更加轻量化，占用电脑的储存空间更加小；而<strong>Hibit Uninstaller</strong>功能更加全面，除卸载软件之外，还可以帮你<strong>扫描</strong>并<strong>清理</strong>电脑中的<strong>注册表</strong>、<strong>垃圾文件</strong>、<strong>空文件夹</strong>等。</p><p>两款软件各有所长，想使用哪个看你自己的个人需求，不过慧妈还是更推荐你使用<strong>Hibit Uninstaller</strong>😊</p><h1 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h1><ul><li><p><strong>DashBeam</strong> : <a href="https://dashbeam.net/zh">官网链接</a><br>介绍：该软件用于远程传输大容量文件使用，比如你想给朋友传一部电影，但电影所占容量太大，如果用QQ传会超出其每天能传文件的大小的上限，如果用网盘传会被限速，这个时候便可以使用这款软件了；不过，如果传输的文件体积较小的话，还是建议首选用QQ传输，这样速度更快。</p></li><li><p><strong>图吧工具箱</strong> : <a href="https://www.tbtool.cn/">官网链接</a><br>介绍：该软件是电脑爱好者圈子必装的软件，里面包含了上百种检测工具，可以帮你一眼看透<strong>CPU</strong>、<strong>内存</strong>、<strong>硬盘</strong>等所有配件的真实型号，还能给电脑做<strong>压力测试</strong>，看它<strong>稳不稳</strong>、查<strong>硬盘</strong>有没有<strong>坏道</strong>。新买的电脑用它验货防被坑，旧电脑用它排查毛病，非常实用👍</p></li><li><p><strong>OBS</strong> : <a href="https://obsproject.com/">官网链接</a><br>介绍：该软件是一款<strong>免费</strong>、<strong>开源</strong>且<strong>功能强大</strong>的”<strong>直播录屏工作台</strong>“，它能把你电脑上的<strong>游戏画面</strong>、<strong>操作窗口</strong>、<strong>摄像头人像</strong>和<strong>麦克风声音</strong>全部都实时合成到一起，既可以直接推流到<strong>抖音</strong>、<strong>B站</strong>等平台做直播，也能一键录制成<strong>高清视频</strong>存到电脑里。</p></li><li><p><strong>UU远程</strong> : <a href="https://uuyc.163.com/">官网链接</a><br>介绍：该软件是一款可以远程操作电脑的软件，在所有国内知名的远程控制电脑的软件中，这款软件提供的<strong>免费服务</strong>更加<strong>优秀</strong>，可实现的功能有<strong>临时远程办公取文件</strong>、<strong>手机或平板操控电脑玩游戏</strong>、<strong>平板连接电脑当副屏</strong>、<strong>远程电脑协助</strong>等。总而言之，功能强大，且绝大多数核心功能完全<strong>免费</strong>，而且<strong>操作简单</strong>，胜过市面上绝大多数远程控制软件👍</p></li><li><p><strong>Everything</strong> : <a href="https://www.voidtools.com/zh-cn/downloads/">官网链接</a><br>介绍：该软件是一款<strong>完全免费</strong>、体积仅<strong>几兆</strong>的“<strong>Windows文件秒搜神器</strong>”，它能让你在输入关键词的瞬间，就从海量文件中<strong>精确定位</strong>到任何一个<strong>文档</strong>、<strong>图片</strong>或<strong>安装包</strong>，彻底告别系统自带的慢速转圈搜索。</p></li></ul>]]></content>
       
       
       <categories>
@@ -148,13 +179,13 @@
       
         <tags>
             
-            <tag> 装机必备 </tag>
-            
-            <tag> 持续更新 </tag>
+            <tag> 软件下载 </tag>
             
             <tag> 安全上网 </tag>
             
-            <tag> 软件下载 </tag>
+            <tag> 持续更新 </tag>
+            
+            <tag> 装机必备 </tag>
             
             <tag> 常用工具 </tag>
             
