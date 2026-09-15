@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>新买的1TB固态，装电脑上显示只有900多GB，是商家在坑我吗？</title>
+      <link href="/%E6%96%87%E7%AB%A0/%E6%96%B0%E4%B9%B0%E7%9A%841TB%E5%9B%BA%E6%80%81%EF%BC%8C%E8%A3%85%E7%94%B5%E8%84%91%E4%B8%8A%E6%98%BE%E7%A4%BA%E5%8F%AA%E6%9C%89900%E5%A4%9AGB%EF%BC%8C%E6%98%AF%E5%95%86%E5%AE%B6%E5%9C%A8%E5%9D%91%E6%88%91%E5%90%97%EF%BC%9F/"/>
+      <url>/%E6%96%87%E7%AB%A0/%E6%96%B0%E4%B9%B0%E7%9A%841TB%E5%9B%BA%E6%80%81%EF%BC%8C%E8%A3%85%E7%94%B5%E8%84%91%E4%B8%8A%E6%98%BE%E7%A4%BA%E5%8F%AA%E6%9C%89900%E5%A4%9AGB%EF%BC%8C%E6%98%AF%E5%95%86%E5%AE%B6%E5%9C%A8%E5%9D%91%E6%88%91%E5%90%97%EF%BC%9F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="开头"><a href="#开头" class="headerlink" title="开头"></a>开头</h1><p>你是一个电脑小白。</p><p>这几天，你终于狠下心来，花了大价钱钱买了一块<strong>1TB的固态硬盘</strong>。想着总算能<strong>给快塞满的C盘松松绑</strong>，把那几个舍不得删的<strong>游戏</strong>装回来，还能顺手存一堆<strong>电影</strong>和<strong>照片</strong>。</p><p>硬盘到了。你小心翼翼地拆开电脑，装上硬盘，开机——一切顺利。可是当你打开”此电脑”，看到那个新出现的盘符时，你愣住了。</p><p><strong>容量那一栏写着：931GB。</strong></p><p>不对啊。你买的明明写着 1TB。1TB 不就是 1024GB 吗？就算按 1000 算，那也该有 1000GB 才对。931GB……那少的将近 <strong>70 个 G</strong> 去哪儿了？</p><p>你把包装盒翻出来又看了一遍，大字写着”1TB”，没错。你打开订单页面，商品标题也写着”1TB”，没错。你甚至开始回想——是不是买到二手盘了？是不是翻新盘、缩水盘？<strong>是不是商家偷偷在坑我？</strong></p><p><strong>先别急，深呼吸一下。</strong></p><p>我可以很确定地告诉你：<strong>你没有被坑</strong>，你的硬盘也一点毛病都没有。那”消失”的 69GB，从始至终都好好地躺在你的硬盘里，<strong>一个字节都没少</strong>。</p><p>真正的原因说出来可能有点意外——不是硬盘少了容量，而是”1TB”这三个字，在<strong>硬盘厂商</strong>和 <strong>Windows</strong> 嘴里，<strong>根本是两个意思</strong>。</p><h1 id="知识科普"><a href="#知识科普" class="headerlink" title="知识科普"></a>知识科普</h1><p>在开始之前，先给你吃个定心丸：<strong>你的硬盘一点问题都没有，一块钱的容量都没少给你。</strong></p><p>那么问题来了，那 <strong>“消失”的 69GB（或者更多）到底去哪了？</strong> 答案很简单——它从来没有消失过，只是”<strong>GB</strong>“这个单位，被用成了两个意思。</p><p>打个比方。你去买布料，店家说”一米布”，你拿回家用自己那把尺子一量，只有 0.91 米。你气得想退货——结果发现，店家的一米是 100 厘米，你量的时候用的是另一种”米”，它等于 109.7 厘米。</p><p>尺子没错，布也没少，只是<strong>两把尺子不一样长</strong>。硬盘和 Windows 之间，就是这个情况。</p><h2 id="1000和1024"><a href="#1000和1024" class="headerlink" title="1000和1024"></a>1000和1024</h2><p>在硬盘制造商的换算标准中：<br><strong>1KB &#x3D; 1000 字节，1MB &#x3D; 1000KB，1GB &#x3D; 1000MB，1TB &#x3D; 1000GB</strong>。这是国际单位制（SI）的规定，跟我们平时数数一样，是十进制的。</p><p>而在windows系统中，也就是你现在用的电脑中，换算标准是这样的：<br><strong>1KB &#x3D; 1024 字节，1MB &#x3D; 1024KB，1GB &#x3D; 1024MB，1TB &#x3D; 1024GB</strong>。因为计算机底层是二进制，1024 正好是 2 的 10 次方，用起来”整齐”。</p><p>这时我们将两组数据摆在一起看：</p><table><thead><tr><th></th><th>硬盘厂商</th><th>Windows</th></tr></thead><tbody><tr><td>1KB</td><td>1000字节</td><td>1024字节</td></tr><tr><td>1MB</td><td>1000KB</td><td>1024KB</td></tr><tr><td>1GB</td><td>1000MB</td><td>1024MB</td></tr><tr><td>1TB</td><td>1000GB</td><td>1024GB</td></tr></tbody></table><p>看出问题在哪了吗？<strong>每一步都差一点点</strong>，但”字节→KB→MB→GB→TB”要<strong>连乘四次</strong>，<strong>误差就被放大了 4 次。</strong></p><h2 id="算一笔账"><a href="#算一笔账" class="headerlink" title="算一笔账"></a>算一笔账</h2><p>假设一块 1TB 硬盘，厂商装了 <strong>1,000,000,000,000 字节</strong>（一后面 12 个 0），这是厂家按 1000 进制算出来的 1TB。</p><p>现在 Windows 拿着自己的尺子来量：</p><ul><li>除以 1024 → <strong>976,562,500 KB</strong></li><li>再除以 1024 → <strong>953,674 MB</strong></li><li>再除以 1024 → <strong>931.32 GB</strong></li></ul><p>于是”此电脑”里就有了那个让人心梗的数字：931GB。此时你恍然大悟——<strong>天哪，原来自己电脑上的931GB是这样来的啊</strong>。</p><p>同理，我们继续往下推：</p><table><thead><tr><th>你买的</th><th>电脑显示</th><th>看起来“少”了</th></tr></thead><tbody><tr><td>256GB</td><td>238GB</td><td>18GB</td></tr><tr><td>512GB</td><td>476GB</td><td>36GB</td></tr><tr><td>1TB</td><td>931GB</td><td>69GB</td></tr><tr><td>2TB</td><td>1862GB</td><td>138GB</td></tr></tbody></table><p>发现没，硬盘的<strong>存储空间越大</strong>，因为换算规则差异而“<strong>损失</strong>”的<strong>硬盘存储空间越多</strong>。及<strong>盘越小，数字差得越小；盘越大，数字差得越大！</strong> 所以16GB的U盘只“少”了1GB左右，而1TB的硬盘却“少”了69GB——但实际上<strong>它们的存储空间从来都没有少过</strong>。</p><h2 id="你可能遇到的一件更奇怪的事"><a href="#你可能遇到的一件更奇怪的事" class="headerlink" title="你可能遇到的一件更奇怪的事"></a>你可能遇到的一件更奇怪的事</h2><p>到这儿还没完。<strong>有些朋友会发现，自己的 1TB 硬盘显示的居然是 954GB，而不是 931GB。</strong></p><p>这不是坏盘，也不是”赚到了”，原因藏在一个<strong>更细的地方。</strong></p><p>我们前面假设的是”厂商给了正好 1,000,000,000,000 字节”。但实际生产中，<strong>硬盘里真正能用的字节数并不固定是个整十进制的数</strong>。你可以在硬盘属性的”容量”那一栏，看到一长串精确到个位的数字。比如：</p><ul><li><code>1,000,204,886,016</code> 字节 → 除以 1024³ &#x3D; 931.51GB</li><li><code>1,024,209,543,168</code> 字节 → 除以 1024³ &#x3D; 953.87GB</li></ul><p>第二个数字你多看一眼——它正好是 1024 的整数倍，也正好是 512 的整数倍。也就是说，这块盘厂商实际给的空间，相当于”1024GB”那么多，比标称的 1TB 还多了 24GB 左右。</p><p>所以结论是：厂商印在包装上的容量，是一个”不少于”的承诺，不是”正好等于”。 同一款标 1TB 的盘，不同批次、不同主控，实际字节数可能不一样，Windows 里看到的数字自然也可能不一样。</p><p>这就解释了为什么网上有人说”我的 1TB 显示 934GB”，另一个人跳出来说”胡说，我的是 954GB”——两个人都是对的，他们只是两块不同的盘。</p><h2 id="怎么确认自己没被坑？"><a href="#怎么确认自己没被坑？" class="headerlink" title="怎么确认自己没被坑？"></a>怎么确认自己没被坑？</h2><h3 id="第一步，看字节数（最重要）"><a href="#第一步，看字节数（最重要）" class="headerlink" title="第一步，看字节数（最重要）"></a>第一步，看字节数（最重要）</h3><p>打开”此电脑” → 找到你的硬盘 → 右键 → <strong>属性</strong>。看”<strong>容量</strong>“那一栏。</p><p>如果你看到的是 <code>1,000,xxx,xxx,xxx</code> 或 <code>1,024,xxx,xxx,xxx</code> 这种一开头的 13 位数字——恭喜，<strong>这就是实打实的 1TB，一个字节都没少。</strong></p><h3 id="第二步，理解为什么”两个界面两个数字”"><a href="#第二步，理解为什么”两个界面两个数字”" class="headerlink" title="第二步，理解为什么”两个界面两个数字”"></a>第二步，理解为什么”两个界面两个数字”</h3><p>很多人会在”磁盘管理”里看到 <code>953869 MB</code> 这样的数字，然后和”此电脑”里的 <code>931GB</code> 对不上，彻底懵了（我自己就被这个数字绕进去过）。</p><p>其实一点都不矛盾——因为<strong>单位不同</strong>。MB 除以 1024 才是 GB：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">953,869 MB ÷ 1024 = 931.32 GB</span><br></pre></td></tr></table></figure><p>同一个东西，一把尺子量出两个读数，只是因为你换了单位看而已。<strong>看数字之前，先看单位</strong>——这句话能帮你破解全网 90% 的”容量玄学”。</p><h2 id="什么情况才是真的被坑了？"><a href="#什么情况才是真的被坑了？" class="headerlink" title="什么情况才是真的被坑了？"></a>什么情况才是真的被坑了？</h2><p>讲到这里，<strong>你就得注意了</strong>。<strong>下面这些情况，才是真有问题</strong>：</p><ul><li>磁盘管理里显示的容量，跟标称差出<strong>一倍以上</strong>（比如标 1TB 只有 460GB 左右）——可能是假盘、扩容盘</li><li>拷贝文件时，一旦超过某个容量就报错、文件损坏、或者拷进去的东西读不出来</li><li>用工具测出来的实际写入量，明显小于显示的容量</li></ul><p>而下面这些，<strong>都是正常的，不用慌</strong>：</p><ul><li>显示 931GB 或 953GB，即使格式化后还少了几个 GB（文件系统本身要占一点地方）</li><li>“此电脑”和”磁盘管理”里数字不一样</li><li>U 盘、内存卡、手机存储，都”少”了一点（这个凭自己主观判断，差不多估一估就行了）</li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>看到此处，想必你已经明白了：你的硬盘并没有骗你。<strong>硬盘厂商</strong>卖给你的，是 <strong>1000 进制</strong>下的容量；<strong>Windows</strong> 量给你看的，是 <strong>1024 进制</strong>下的读数。<strong>一笔账，两把尺子</strong>，从头到尾都是同一块硬盘。你花的每一分钱，都变成了实实在在的存储空间——<strong>只不过其中一部分，是藏在”单位”这两个字里的。</strong></p><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>好了，以上便是本期教学的所有内容了，想必看到这里，你已经又学会了一个关于电脑的小知识了，恭喜你，距离电脑大神又更近了一步！🎉🎉🎉</p><p>最后，不要忘了<strong>关注</strong>慧妈，<strong>收藏</strong>此博客，我会在这上面更新更多教学内容。你们的<strong>关注</strong>与<strong>打赏</strong>是慧妈更新的<strong>最大动力</strong>😊</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教学内容 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 小白必看 </tag>
+            
+            <tag> 干货满满 </tag>
+            
+            <tag> 教学 </tag>
+            
+            <tag> 持续更新 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何从电脑上卸载软件</title>
       <link href="/%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E4%BB%8E%E7%94%B5%E8%84%91%E4%B8%8A%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6/"/>
       <url>/%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E4%BB%8E%E7%94%B5%E8%84%91%E4%B8%8A%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6/</url>
@@ -20,13 +51,13 @@
       
         <tags>
             
-            <tag> 教学 </tag>
-            
-            <tag> 持续更新 </tag>
+            <tag> 小白必看 </tag>
             
             <tag> 干货满满 </tag>
             
-            <tag> 小白必看 </tag>
+            <tag> 教学 </tag>
+            
+            <tag> 持续更新 </tag>
             
         </tags>
       
@@ -51,15 +82,15 @@
       
         <tags>
             
+            <tag> 小白必看 </tag>
+            
+            <tag> 干货满满 </tag>
+            
             <tag> 教学 </tag>
             
             <tag> 安全上网 </tag>
             
-            <tag> 干货满满 </tag>
-            
             <tag> 装机必备 </tag>
-            
-            <tag> 小白必看 </tag>
             
         </tags>
       
@@ -84,15 +115,15 @@
       
         <tags>
             
+            <tag> 小白必看 </tag>
+            
+            <tag> 干货满满 </tag>
+            
             <tag> 教学 </tag>
             
             <tag> 持续更新 </tag>
             
-            <tag> 干货满满 </tag>
-            
             <tag> 装机必备 </tag>
-            
-            <tag> 小白必看 </tag>
             
         </tags>
       
@@ -119,11 +150,11 @@
             
             <tag> 教学 </tag>
             
+            <tag> 持续更新 </tag>
+            
             <tag> 软件下载 </tag>
             
             <tag> 安全上网 </tag>
-            
-            <tag> 持续更新 </tag>
             
         </tags>
       
@@ -150,9 +181,9 @@
             
             <tag> 教学 </tag>
             
-            <tag> 软件下载 </tag>
-            
             <tag> 持续更新 </tag>
+            
+            <tag> 软件下载 </tag>
             
             <tag> 常用工具 </tag>
             
@@ -179,15 +210,15 @@
       
         <tags>
             
+            <tag> 持续更新 </tag>
+            
             <tag> 软件下载 </tag>
+            
+            <tag> 常用工具 </tag>
             
             <tag> 安全上网 </tag>
             
-            <tag> 持续更新 </tag>
-            
             <tag> 装机必备 </tag>
-            
-            <tag> 常用工具 </tag>
             
         </tags>
       
