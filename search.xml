@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>什么是IPv4，什么是IPv6？</title>
+      <link href="/%E6%96%87%E7%AB%A0/%E4%BB%80%E4%B9%88%E6%98%AFIPv4%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AFIPv6%EF%BC%9F/"/>
+      <url>/%E6%96%87%E7%AB%A0/%E4%BB%80%E4%B9%88%E6%98%AFIPv4%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AFIPv6%EF%BC%9F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="开头"><a href="#开头" class="headerlink" title="开头"></a>开头</h1><p>你有没有经历过这样的场景——</p><p>某天你在刷视频，刷到一条讲“网络”的内容，视频里的博主滔滔不绝：<strong>“现在的IPv6已经全面普及了”“你家宽带要是不支持IPv6，说明你家路由器太老了”“IPv4地址早就耗尽了”</strong>……</p><p>你听着听着就懵了：<strong>IPv4</strong>？<strong>IPv6</strong>？这俩是什么东西？为什么一个叫4，一个叫6？那<strong>IPv5</strong>去哪了？是被吃了吗？</p><p>于是你打开电脑，想自己查一查。结果一搜，出来的全是这种句子：</p><p><strong>“IPv4采用32位地址长度，以点分十进制表示”</strong><br><strong>“IPv6采用128位地址长度，以冒号十六进制表示”</strong><br><strong>“IPv6解决了IPv4地址枯竭问题，并支持无状态地址自动配置”</strong></p><p>……每个字你都认识，但连在一起，你还是不知道它在说什么。32位？128位？地址枯竭？这不是在讲网络吗？怎么跟数学课似的？</p><p>你甚至开始怀疑：<strong>我是不是太笨了？连个IP都搞不懂？</strong></p><p><strong>别慌。</strong></p><p>你一点都不笨。这些问题之所以看不懂，不是因为难，而是因为<strong>没有人从最根本的地方给你讲起</strong>。那些文章是写给已经懂网络的人看的，负责“复习”，而不是负责“教学”。</p><p>所以这篇文章，慧妈打算换个讲法——<strong>不背术语、不甩概念</strong>，就从你每天上网这件事本身讲起，让你看完之后能清清楚楚地明白：</p><p><strong>什么是IPv4？什么是IPv6？它们俩到底有什么区别？以及，为什么非得搞出个IPv6不可？</strong></p><p>下面我们开始教学。</p><h1 id="知识科普"><a href="#知识科普" class="headerlink" title="知识科普"></a>知识科普</h1><h2 id="一、先搞懂“IP地址”是个啥"><a href="#一、先搞懂“IP地址”是个啥" class="headerlink" title="一、先搞懂“IP地址”是个啥"></a>一、先搞懂“IP地址”是个啥</h2><p>在讲IPv4和IPv6之前，我们得先把一个更基础的概念搞明白：<strong>IP地址</strong>。</p><p>你可以把互联网想象成一个<strong>超级巨大的小区</strong>。这个小区里住了无数户人家：有你家的电脑、你爸妈的手机、你家的智能电视、还有隔壁老王家那台24小时开着的NAS（网络存储服务器）。</p><p>那么问题来了，小区里这么多户人家，<strong>快递员怎么把包裹准确地送到你家</strong>，而不是送到老王家呢？</p><p>答案很简单：<strong>每户人家都有一个门牌号。</strong></p><p>互联网也是同理。<strong>IP地址，就是每一台联网设备在这个“互联网小区”里的门牌号。</strong> 你的电脑、你的手机、你家里的路由器、甚至你访问的那些网站的服务器，全都靠这个门牌号来互相找到对方、互相通信。</p><p>举个例子：当你在浏览器里输入网址，敲下回车的那一刻，你的电脑其实是在干这么一件事——</p><p><strong>“我要找这个网站，它的门牌号是多少？找到之后，把我的请求寄过去。”</strong></p><p>网站收到请求，处理好之后，再按照你留下的门牌号，<strong>把数据原路寄回给你</strong>。</p><p>这就是你每次打开一个网页，背后发生的事。你看到的“唰”一下就加载出来的页面，其实是你的电脑和远在千里之外的服务器，用门牌号互相寄了好几轮包裹的结果。</p><p>那么现在的关键问题就来了：<strong>这个门牌号，到底长什么样？</strong></p><p>答案不止一种。目前全世界在用的门牌号规则，有<strong>两套</strong>——它们分别叫做 <strong>IPv4</strong> 和 <strong>IPv6</strong>。</p><p>接下来，我们就一个一个讲。</p><h2 id="二、IPv4——我们用了四十多年的老门牌号"><a href="#二、IPv4——我们用了四十多年的老门牌号" class="headerlink" title="二、IPv4——我们用了四十多年的老门牌号"></a>二、IPv4——我们用了四十多年的老门牌号</h2><h3 id="1-IPv4长什么样？"><a href="#1-IPv4长什么样？" class="headerlink" title="1.IPv4长什么样？"></a>1.IPv4长什么样？</h3><p><strong>IPv4</strong>的全称是 <strong>Internet Protocol version 4</strong>，翻译过来就是“<strong>互联网协议第4版</strong>”。</p><p>它的门牌号长这样：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">192.168.1.1</span><br></pre></td></tr></table></figure><p>是不是有点眼熟？你以前可能在路由器背面、或者在电脑的网络设置里见过这种样子的数字。</p><p>这种格式叫做<strong>点分十进制</strong>，说白了就是：<strong>用四组数字，中间用小数点隔开</strong>。</p><p>那这四个数字能随便取吗？不能。<strong>每一个数字的范围都是 0 ~ 255</strong>，超过255就不合法了。所以你永远看不到 <code>192.168.300.1</code> 这种地址，就像你永远看不到“门牌号300号”挂在一个只有200户的小区里一样。</p><h3 id="2-算一笔账：IPv4到底能装多少户人家？"><a href="#2-算一笔账：IPv4到底能装多少户人家？" class="headerlink" title="2.算一笔账：IPv4到底能装多少户人家？"></a>2.算一笔账：IPv4到底能装多少户人家？</h3><p>我们在前面说，IPv4的地址是由<strong>四组数字</strong>组成的，每一组数字有<strong>256种可能</strong>（0到255，一共256个）。</p><p>那么总的门牌号数量就是：</p><p><strong>256 × 256 × 256 × 256 &#x3D; 4,294,967,296</strong></p><p>也就是大约 <strong>43亿个</strong>。</p><p>43亿个地址，听起来是不是还挺多的？在IPv4刚诞生的那个年代（1981年），<strong>互联网上总共也就几百台电脑</strong>，全世界所有人都觉得：<strong>这辈子都用不完。</strong></p><p><strong>然而，四十多年过去了，情况变成了什么样呢？</strong></p><p>现在全世界有多少人在上网？<strong>五十多亿！！！</strong></p><p>而且注意，不是“一个人占一个地址”——你家里有电脑、有手机、有平板、有智能电视、有扫地机器人、有智能音箱、有智能门锁、有摄像头……<strong>每一样能联网的设备，都要占一个门牌号。</strong></p><p>一家四口，可能就是十几个设备。工厂、公司、学校里的服务器，更是一台就是一个地址，机房里的服务器动辄排成几十排。</p><p><strong>于是，43亿个地址，早就被分完了。</strong></p><p>事实上，早在<strong>2011年</strong>，全球的IPv4地址池就已经正式宣告耗尽；到<strong>2019年</strong>，连最后一个IPv4地址也被分配出去了。</p><p>打个比方：IPv4就像一栋只有43万套房子的小区，本来以为住户也就几千人，结果四十年后涌来了几百万住户，不光房子住满了，连楼道里、楼梯间都塞满了人。<strong>房子早就不够分了。</strong></p><p>不过你可能会疑惑：<strong>那我家的电脑手机现在不还是好好地在上网吗？也没见谁上不了网啊？</strong></p><p>这里慧妈要给你讲一个非常关键的操作，叫做<strong>NAT</strong>。</p><h3 id="3-救场招数：NAT（网络地址转换）"><a href="#3-救场招数：NAT（网络地址转换）" class="headerlink" title="3.救场招数：NAT（网络地址转换）"></a>3.救场招数：NAT（网络地址转换）</h3><p>既然门牌号不够用，那就<strong>共用</strong>呗。</p><p>我们接着用小区来打比方。IPv4门牌号不够，就好比这个小区里<strong>只有一户人家的门牌号</strong>是真实有效的，比如就是 <strong>100号楼1单元101室</strong>。</p><p>那怎么办？<strong>整栋楼的人都共用这一个门牌号。</strong></p><p>快递员送来包裹，只送到这户人家门口；然后这户人家的“管家”（也就是你家的<strong>路由器</strong>）看一眼包裹上的收件人名字，比如“给老张的”，就转手送到老张手里；是“给小李的”，就送到小李手里。</p><p><strong>——这就是NAT，全称网络地址转换。</strong></p><p>你家宽带从运营商那里<strong>只拿到了一个公网IP</strong>（就是那个“真实有效的门牌号”），但你家里的电脑、手机、电视，<strong>每一个都有自己独立的“内部编号”</strong>（这些内部编号通常长这样：<code>192.168.1.xxx</code>，<strong>注意：任何以192.168开头的IP地址都属于内网IP，只能访问处于同一局域网内的对应IP的设备，无法访问局域网之外的设备，“localhost”开头的也是同理</strong>）。</p><p>当你家的电脑要上网时，路由器会<strong>偷偷把包裹上的发件人，改成自己那个唯一的公网门牌号</strong>再发出去；等回信到了，路由器再根据记录，把回信<strong>准确地转交给当初发信的那台设备</strong>。</p><p>整个过程，你的电脑完全不知情，网站也不知道——双方都以为是直接对话。<strong>只有路由器在中间忙前忙后。</strong></p><p>所以，现在你能上网，不是因为你的设备有独立门牌号，而是因为<strong>你家路由器在门口替全家收发快递</strong>。</p><p><strong>NAT很聪明，但它也有明显的坏处：</strong></p><ul><li><strong>效率变低</strong>：每次数据都要路由器转换一遍，来回折腾，增加了延迟</li><li><strong>身份难辨</strong>：网站只知道是“你家”访问了它，不知道具体是你家哪台设备</li><li><strong>端到端连接困难</strong>：像远程桌面、P2P下载、智能家居远程控制这些需要“两台设备直接对话”的场景，被NAT挡在门口，经常连不上（如果你玩游戏时提示“NAT类型受限”，就是这个原因）</li><li><strong>配置麻烦</strong>：想让外面的设备主动连进你家，就得手动做“<strong>端口映射</strong>”，而这一步对小白来说简直是天书</li></ul><p>一句话总结：<strong>NAT是个应急的补丁，能用，但不优雅。</strong></p><h2 id="三、IPv6——重开一局的新门牌号"><a href="#三、IPv6——重开一局的新门牌号" class="headerlink" title="三、IPv6——重开一局的新门牌号"></a>三、IPv6——重开一局的新门牌号</h2><p>既然IPv4挤得像春运的火车，那干脆<strong>重新设计一套门牌号系统</strong>——这就是<strong>IPv6</strong>。</p><p><strong>IPv6</strong>的全称是 <strong>Internet Protocol version 6</strong>，也就是“<strong>互联网协议第6版</strong>”。</p><blockquote><p><em>（顺便回答开头那个问题：<strong>IPv5去哪了？</strong> IPv5确实存在过，但它是一个实验性的协议，主要是为音视频流设计的，从来没有大规模部署过，后来就被放弃了。所以我们的门牌号直接从第4版跳到了第6版，中间的第5版只活在历史文档里。）</em></p></blockquote><h3 id="1-IPv6长什么样？"><a href="#1-IPv6长什么样？" class="headerlink" title="1.IPv6长什么样？"></a>1.IPv6长什么样？</h3><p>它的门牌号长这样：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2408:8260:1234:5678:abcd:ef01:2345:6789</span><br></pre></td></tr></table></figure><p>第一次看到是不是有点头皮发麻？<strong>八组，中间用冒号隔开，每组还是十六进制的</strong>（也就是除了 0-9，还有 a-f）。</p><p>这种格式叫做<strong>冒号十六进制</strong>。虽然看起来比IPv4长得多、怪得多，但请你先别急着害怕，我们一会儿算完账你就明白了。</p><h3 id="2-算一笔账：IPv6到底能装多少户人家？"><a href="#2-算一笔账：IPv6到底能装多少户人家？" class="headerlink" title="2.算一笔账：IPv6到底能装多少户人家？"></a>2.算一笔账：IPv6到底能装多少户人家？</h3><p>我们还是用刚才的方法算一遍。</p><p>IPv6由<strong>八组</strong>数字组成，每一组是<strong>十六进制</strong>的，也就是<strong>16种可能</strong>（0-9加上a-f），所以每一组是 ( 16^4 &#x3D; 65536 ) 种可能。</p><p>那么总数量就是：</p><p><strong>65536 的 8 次方 &#x3D; 2 的 128 次方 ≈ 3.4 × 10³⁸</strong></p><p>这个数字有多大呢？<strong>340,282,366,920,938,463,463,374,607,431,768,211,456 个。</strong></p><p>这么说吧：</p><ul><li>地球上的<strong>每一粒沙子</strong>，都能分到一个IPv6地址，而且还绰绰有余</li><li>就算你把整个地球表面<strong>每一平方毫米</strong>都填满一台联网设备，地址也远远用不完</li><li>有人认真算过，如果按每秒分配10亿个地址的速度，<strong>把IPv6地址发完需要的时间比宇宙的年龄还长</strong></li></ul><p>对比一下：</p><table><thead><tr><th></th><th>IPv4</th><th>IPv6</th></tr></thead><tbody><tr><td>地址总数量</td><td>约43亿个</td><td>约3.4×10³⁸个</td></tr><tr><td>够不够用</td><td>2011年就耗尽了</td><td>宇宙灭亡都用不完</td></tr></tbody></table><p><strong>这就是IPv6带来的最大改变：门牌号多到根本不需要共用。</strong></p><h3 id="3-IPv6带来的好处"><a href="#3-IPv6带来的好处" class="headerlink" title="3.IPv6带来的好处"></a>3.IPv6带来的好处</h3><p>门牌号够多了，很多以前靠“打补丁”解决的问题，就自然消失了。IPv6带来的好处主要有这几个：</p><ul><li><strong>每个设备都有独立公网地址</strong>：不用再挤一个门牌号了，你家每台设备都能拥有自己的“真实门牌号”，<strong>NAT可以彻底退休</strong></li><li><strong>端到端直连，速度更快</strong>：两台设备可以直接对话，不用路由器在中间来回转手。远程访问家里的电脑、NAS、摄像头，变得非常简单直接</li><li><strong>自动配置，插上就能用</strong>：IPv6支持<strong>无状态地址自动配置（SLAAC）</strong>，设备接入网络后能自己“领到”一个地址，不用像IPv4那样又是DHCP又是手动设置，插上网线就能上网</li><li><strong>安全性更好</strong>：IPv6在设计阶段就把<strong>IPSec加密</strong>作为标配，虽然不是强制使用，但底子要比IPv4的好</li><li><strong>不用再搞端口映射</strong>：想在外部访问家里的设备，不再需要去路由器里配置那堆让人头秃的“端口映射”规则</li></ul><p>不过慧妈也要说句公道话：<strong>IPv6也不是完美无缺的。</strong> 因为地址太长太复杂，纯靠人脑去记几乎不可能（IPv4的 <code>192.168.1.1</code> 你还能背下来，IPv6的地址你试试？），而且很多老旧设备、老旧网站到现在还不支持它，所以<strong>在未来很长一段时间里，IPv4和IPv6会同时存在</strong>，这就是所谓的“<strong>双栈</strong>”模式。</p><h2 id="四、两者到底有什么区别？"><a href="#四、两者到底有什么区别？" class="headerlink" title="四、两者到底有什么区别？"></a>四、两者到底有什么区别？</h2><p>讲了这么多，我们把IPv4和IPv6的差别整理成一张表，看起来更清楚：</p><table><thead><tr><th>对比项</th><th>IPv4</th><th>IPv6</th></tr></thead><tbody><tr><td>全称</td><td>Internet Protocol version 4</td><td>Internet Protocol version 6</td></tr><tr><td>地址长度</td><td>32位</td><td>128位</td></tr><tr><td>表示方式</td><td>点分十进制，如 <code>192.168.1.1</code></td><td>冒号十六进制，如 <code>2408:8260:...</code></td></tr><tr><td>地址总数</td><td>约43亿个</td><td>约3.4×10³⁸个</td></tr><tr><td>地址够不够</td><td>2011年就耗尽了</td><td>根本用不完</td></tr><tr><td>是否需要NAT</td><td>需要，全靠NAT续命</td><td>不需要，每台设备可独立公网</td></tr><tr><td>地址配置</td><td>手动配置或DHCP</td><td>支持自动配置（SLAAC）</td></tr><tr><td>端到端连接</td><td>受NAT阻隔，困难</td><td>直连通畅</td></tr><tr><td>安全性</td><td>后期打补丁（IPSec可选）</td><td>设计之初就内置IPSec</td></tr><tr><td>普及程度</td><td>全面普及，但仍不够用</td><td>正在普及，与IPv4共存</td></tr></tbody></table><p>聪明的你可能发现了，<strong>IPv6本质上是把IPv4当年设计时留下的所有遗憾，全部重新做了一遍。</strong></p><p>当年设计IPv4的人，没想到互联网会普及到几十亿人，也没想到家里的冰箱、灯泡、门锁都要联网。所以他们只留了43亿个地址，觉得够用一辈子了。</p><p>而IPv6的设计者，吸取了教训，直接一步到位——<strong>给宇宙里每一粒沙子都留了个位置。</strong></p><h2 id="五、手把手：查看你自己电脑的IP地址"><a href="#五、手把手：查看你自己电脑的IP地址" class="headerlink" title="五、手把手：查看你自己电脑的IP地址"></a>五、手把手：查看你自己电脑的IP地址</h2><p>讲了这么多理论，我们来看点实在的。<strong>你自己电脑的IP地址是多少？是IPv4还是IPv6？</strong></p><p>接下来慧妈教你怎么查看，全程只要点几下鼠标，非常简单。</p><p><strong>方法一：用命令查看（最快）</strong></p><ul><li>按键盘上的 <strong>Win + R</strong>，打开“运行”窗口，输入 <code>cmd</code>，回车</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmd</span><br></pre></td></tr></table></figure><ul><li>在弹出的黑色窗口里，输入下面这行命令，然后回车</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipconfig</span><br></pre></td></tr></table></figure><ul><li>这时候你会看到一大串信息，找到 <strong>以太网适配器</strong> 或者 <strong>无线局域网适配器 WLAN</strong> 那一栏，你会看到类似这样的内容：</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">IPv4 地址 . . . . . . . . . . . . : 192.168.1.105</span><br><span class="line">IPv6 地址 . . . . . . . . . . . . : 2408:8260:1234:5678:abcd:ef01:2345:6789</span><br></pre></td></tr></table></figure><p><strong>看到了吗？你的电脑同时拥有两个地址。</strong></p><p>那个 <code>192.168.1.xxx</code> 就是你的<strong>IPv4地址</strong>，它是你家路由器分配的<strong>内部编号</strong>；而那个一长串带冒号的，就是你的<strong>IPv6地址</strong>，它通常是由运营商分配给你的<strong>公网门牌号</strong>。</p><p><strong>方法二：用鼠标查看（更直观）</strong></p><ul><li>点击桌面任务栏右下角的<strong>网络图标</strong>，点击<strong>网络和 Internet 设置</strong></li><li>点击<strong>以太网</strong>或者<strong>WLAN</strong>（看你用的哪种联网方式）</li><li>往下滑，你就能看到 <strong>IPv4 地址</strong> 和 <strong>IPv6 地址</strong> 两栏了</li></ul><p><strong>重要提醒</strong>：如果你在“IPv6地址”那一栏看到的是空的，或者显示的是 <code>fe80::</code> 开头的地址，那说明<strong>你家宽带或者路由器还没有开启IPv6</strong>(这个通常要到路由器的后台设置界面打开)。这种情况不用担心，说明你家目前还在用IPv4上网，一切正常，只是新门牌号还没启用而已。</p><p>（<code>fe80::</code> 开头的这种地址叫做<strong>链路本地地址</strong>，它只在你自己家局域网内部有效，出了家门就不认了，所以它不能用来上网，看到它不代表你的IPv6已经启用。）</p><h2 id="六、几个你一定会好奇的问题"><a href="#六、几个你一定会好奇的问题" class="headerlink" title="六、几个你一定会好奇的问题"></a>六、几个你一定会好奇的问题</h2><p><strong>问：IPv6都出来了，那IPv4是不是要淘汰了？我家电脑会不会上不了网？</strong></p><p>答：<strong>放心，不会。</strong> IPv4和IPv6是<strong>两套完全平行的系统</strong>，它们不是“新版本取代旧版本”的关系，而是“同时并存、各干各的”。现在绝大多数设备和网站都支持“<strong>双栈</strong>”，也就是IPv4和IPv6两手都抓、两边都能聊。所以你家现在的IPv4网络，未来很多年都会继续正常工作，不用担心电脑突然上不了网。</p><p><strong>问：为什么我的地址有时候是 <code>192.168.x.x</code>，有时候是 <code>10.x.x.x</code>？为什么都是“内网地址”？</strong></p><p>答：这些开头的地址，是国际标准里专门留给<strong>局域网内部使用</strong>的“<strong>私有地址</strong>”，也就是说，它们不能直接在公网上使用。类似的还有 <code>172.16.x.x</code> 到 <code>172.31.x.x</code>。你家的电脑、手机拿到的都是这种地址，真正的公网门牌号在你家路由器那里。这就是前面说的<strong>NAT</strong>在起作用。</p><p><strong>问：怎么判断自己家有没有用上IPv6？</strong></p><p>答：最简单的办法就是按前面说的方法看一下。如果你在 <code>ipconfig</code> 里看到了<strong>一长串带冒号、不以 <code>fe80</code> 开头</strong>的地址，那就是用上了。或者你可以访问一些专门检测IPv6的网站，如果显示“IPv6 已接入”，那就是已经用上了。</p><p><strong>问：既然IPv6这么好，为什么到现在还没普及完？</strong></p><p>答：因为<strong>换门牌号不是换个号码那么简单</strong>。整个互联网上跑着无数的设备：老电脑、老路由器、老网站、老软件……它们全都写死了只认IPv4，要让它们全部升级，工作量极其庞大，而且要花很多钱。所以这注定是一个<strong>慢慢过渡</strong>的过程，可能要再花十几二十年。另外，因为IPv6的访问中间没有NAT，所以设备与设备之间通过IPv6传输文件在<strong>速度和延迟上都会强上不少</strong>，所以当你有公网IPv6地址时，访问的网站如果也支持IPv6连接，那么会<strong>优先通过IPv6进行连接和传输数据</strong>，否则以IPv4传输数据。</p><p><strong>问：那IPv5呢？它到底去哪了？</strong></p><p>答：我们前面已经说过啦——IPv5是一个只在实验室里活过的实验性协议，专门为音视频流设计的，从没大规模使用过，后来就被放弃了。所以门牌号从第4版直接跳到了第6版，<strong>第5版只留在历史文档里</strong>。你不是数错了，是真的没有IPv5。</p><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>好了，以上便是本期教学的所有内容了。</p><p>我们回过头来看，其实这篇文章真正讲透的，只有<strong>一件事</strong>：</p><p><strong>IPv4是那个用了四十多年、只有43亿个门牌号、挤到要靠NAT续命的老地址系统；而IPv6是重新设计、拥有3.4×10³⁸个门牌号、能让每台设备都拥有独立身份的新地址系统。</strong></p><p>一栋楼挤满了人，于是我们盖了一栋新的楼——楼里空得能装下整个地球的沙子。</p><p>看到这里，想必你已经明白了，<strong>IP地址不是什么高深莫测的东西，它就是网络世界的门牌号</strong>；而IPv4和IPv6的区别，说到底就是 <strong>“够不够用”</strong> 四个字。以后再看到有人讨论IPv6扩容、地址枯竭，你就能听懂他在说什么了。</p><p>恭喜你，距离电脑大神又更近了一步！🎉🎉🎉</p><p>最后，不要忘了<strong>关注</strong>慧妈，<strong>收藏</strong>此博客，我会在这上面更新更多教学内容。你们的<strong>关注</strong>与<strong>打赏</strong>是慧妈更新的<strong>最大动力</strong>😊</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教学内容 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教学 </tag>
+            
+            <tag> 网络知识 </tag>
+            
+            <tag> 小白必看 </tag>
+            
+            <tag> 干货满满 </tag>
+            
+            <tag> 持续更新 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>新买的1TB固态，装电脑上显示只有900多GB，是商家在坑我吗？</title>
       <link href="/%E6%96%87%E7%AB%A0/%E6%96%B0%E4%B9%B0%E7%9A%841TB%E5%9B%BA%E6%80%81%EF%BC%8C%E8%A3%85%E7%94%B5%E8%84%91%E4%B8%8A%E6%98%BE%E7%A4%BA%E5%8F%AA%E6%9C%89900%E5%A4%9AGB%EF%BC%8C%E6%98%AF%E5%95%86%E5%AE%B6%E5%9C%A8%E5%9D%91%E6%88%91%E5%90%97%EF%BC%9F/"/>
       <url>/%E6%96%87%E7%AB%A0/%E6%96%B0%E4%B9%B0%E7%9A%841TB%E5%9B%BA%E6%80%81%EF%BC%8C%E8%A3%85%E7%94%B5%E8%84%91%E4%B8%8A%E6%98%BE%E7%A4%BA%E5%8F%AA%E6%9C%89900%E5%A4%9AGB%EF%BC%8C%E6%98%AF%E5%95%86%E5%AE%B6%E5%9C%A8%E5%9D%91%E6%88%91%E5%90%97%EF%BC%9F/</url>
@@ -20,11 +53,11 @@
       
         <tags>
             
+            <tag> 教学 </tag>
+            
             <tag> 小白必看 </tag>
             
             <tag> 干货满满 </tag>
-            
-            <tag> 教学 </tag>
             
             <tag> 持续更新 </tag>
             
@@ -51,11 +84,11 @@
       
         <tags>
             
+            <tag> 教学 </tag>
+            
             <tag> 小白必看 </tag>
             
             <tag> 干货满满 </tag>
-            
-            <tag> 教学 </tag>
             
             <tag> 持续更新 </tag>
             
@@ -82,11 +115,11 @@
       
         <tags>
             
+            <tag> 教学 </tag>
+            
             <tag> 小白必看 </tag>
             
             <tag> 干货满满 </tag>
-            
-            <tag> 教学 </tag>
             
             <tag> 安全上网 </tag>
             
@@ -115,11 +148,11 @@
       
         <tags>
             
+            <tag> 教学 </tag>
+            
             <tag> 小白必看 </tag>
             
             <tag> 干货满满 </tag>
-            
-            <tag> 教学 </tag>
             
             <tag> 持续更新 </tag>
             
