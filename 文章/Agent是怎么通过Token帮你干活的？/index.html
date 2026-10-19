@@ -1,0 +1,930 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Agent是怎么通过Token帮你干活的？ | 慧妈的博客</title><meta name="keywords" content="教学,AI,小白必看,干货满满,持续更新"><meta name="author" content="Hui"><meta name="copyright" content="Hui"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Agent是怎么通过Token帮你干活的？"><meta name="application-name" content="Agent是怎么通过Token帮你干活的？"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Agent是怎么通过Token帮你干活的？"><meta property="og:url" content="http://example.com/%E6%96%87%E7%AB%A0/Agent%E6%98%AF%E6%80%8E%E4%B9%88%E9%80%9A%E8%BF%87Token%E5%B8%AE%E4%BD%A0%E5%B9%B2%E6%B4%BB%E7%9A%84%EF%BC%9F/index.html"><meta property="og:site_name" content="慧妈的博客"><meta property="og:description" content=".video-container {     position: relative;     width: 100%;     padding-top: 56.25%; &amp;#x2F;* 16:9 aspect ratio (height&amp;#x2F;width &amp;#x3D; 9&amp;#x2F;16 * 100%) *&amp;#x2F; }  .vid"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOIatYyET_qVoMb-Q0xXBRyIAyfdI0AAgcTaxtZLLFWCA-Phd4hwvcBAAMCAAN4AAM9BA"><meta property="article:author" content="Hui"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOIatYyET_qVoMb-Q0xXBRyIAyfdI0AAgcTaxtZLLFWCA-Phd4hwvcBAAMCAAN4AAM9BA"><meta name="description" content=".video-container {     position: relative;     width: 100%;     padding-top: 56.25%; &amp;#x2F;* 16:9 aspect ratio (height&amp;#x2F;width &amp;#x3D; 9&amp;#x2F;16 * 100%) *&amp;#x2F; }  .vid"><link rel="shortcut icon" href="/hui-h-favicon.png"><link rel="canonical" href="http://example.com/%E6%96%87%E7%AB%A0/Agent%E6%98%AF%E6%80%8E%E4%B9%88%E9%80%9A%E8%BF%87Token%E5%B8%AE%E4%BD%A0%E5%B9%B2%E6%B4%BB%E7%9A%84%EF%BC%9F/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2024/07/27/125766904/ba62475f396df9de3316a08ed9e65d86_5680958632268053399..png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: 'https://huixing.netlify.app/.netlify/functions/twikoo',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"api","api":"https://img2color-go.vercel.app/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: Hui","link":"链接: ","source":"来源: 慧妈的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '慧妈的博客',
+  title: 'Agent是怎么通过Token帮你干活的？',
+  postAI: '',
+  pageFillDescription: '开头, 先说清楚：这篇你会得到什么, 知识科普, 一、先把AI这个字拆成两半：一个脑子一双手, 1. 脑子：那个只会说话的大模型, 2. 玻璃盒子：它在服务器里碰不到你桌上的任何东西, 3. 所以只有脑子的 AI只能教你, 二、Agent 不是更聪明的 AI而是给脑子配了一双手, 1. 手到底是什么东西, 2. 那它们是怎么配合的？, 3. 关键：它不会自己拿主意, 4. 所以它俩必须组队, 三、为什么非得一步步循环着来？直接一步到位不行吗？, 1. 它一次只能说一小段, 2. 它不知道结果就没法决定下一步, 3. 活儿越长越容易跑偏, 4. 所以会拆步骤比聪明更重要, 四、同一个圈能干的事远不止写代码, 五、那 token 到底花在哪儿了？, 1. 每一轮它都要重读一遍, 2. 为什么 Agent 比聊天贵那么多, 3. 一张示意账单（不是精确数字看结构就行）, 4. 三个能立刻省钱的习惯, 六、几个你一定会好奇的问题, 七、注意事项：第一次用 Agent请守住这几条, 1. 权限能少给就少给, 2. 密码、密钥一个字都别给它, 3. 重要操作让它先说再做, 4. 一定要验收, 5. 给它一个止损线, 结语开头当你打开了或者其他软件在一个对话框里打了一句话帮我做一个新年倒计时网页然后按下回车接下来十秒钟大概是这样的左边空白的文件列表里啪地冒出一个中间的代码编辑器一行一行的代码自己往下长命令行里跳出运行中浏览器弹出来结果是个红通通的报错编辑器自己跳到了第行代码自己补上了一个括号再运行一次浏览器里倒计时动起来了而你从头到尾只做了一件事打了那一句话没有点新建文件没有敲一个字母没有点运行连报错都不是你改的于是有三个问题几乎是同时从脑子里蹦出来的刚才是谁在打字是谁点的运行有手吗这三个问题就是这篇文章要回答的全部内容如果你看过上一篇什么是眼里的文字为什么不是字那你已经知道是在处理一块块这一篇就是它的下一集我们把这十秒钟拆开一格一格地看一个只会说的大模型是怎么样通过把活儿一步步干完的如果你上一篇没看也没关系这篇里凡是需要用到的地方慧妈都会用一句话再给你补一遍你顺着往下看就行先补一句最要紧的是处理信息的最小单位你可以直接把它叫块眼里的文字不是一个个字而是一块一块的积木它读的是块说的也是块这一篇你只要记住这一句就够了剩下的不用管先说清楚这篇你会得到什么看完之后下面这五件事你都能讲给别人听为什么聊天只能教你做而能替你做大模型被关在玻璃盒子里是什么意思一句需求在内部是怎么变成一张纸一张纸传下去的为什么它非要来回转圈不能一步干完为什么干活比聊天费费得多准备好了吗我们从最简单的那个问题开始知识科普一先把这个字拆成两半一个脑子一双手我们平时说的其实是一个很含糊的词要搞懂第一件事就是把脑子里那个模糊的拆成两样东西一个脑子一双手脑子那个只会说话的大模型你平时聊天用的那个东西豆包千问它的正式名字叫大模型你也可以叫它模型慧妈用一个不严谨但很好用的说法描述它大模型是一台文字接龙机器你给它一段话它就一个一个地往后猜猜出一段新的文字给你它猜得非常好好到你觉得它在思考但不管它内部多复杂它对外能做的事情只有一件吐出注意这句话它是这篇文章的地基大模型唯一的输出就是一串它不会新建文件不会敲键盘不会点鼠标不会运行程序它连保存都不会玻璃盒子它在服务器里碰不到你桌上的任何东西那大模型跑在哪儿跑在别人的机房里跑在服务器上它不在你的电脑里它没有你桌面上的文件列表没有你的盘盘看不到你的浏览器也摸不到你的鼠标这里我打个比方这就像一位被关在玻璃房里的老师傅你能听见他说话他也能听见你说话他懂的东西非常多什么都会但他伸手只能摸到玻璃所以你在聊天框里问它帮我把桌面上的照片按月份整理一下它只能回你好的你可以先新建几个文件夹分别命名为月月然后把照片拖进去它讲得一点没错甚至很详细但活还是你自己干的因为它的手被玻璃挡住了所以只有脑子的只能教你我们把这两种体验放在一起对比你立刻就懂了只有一个脑子聊天有脑子有手你说帮我做个倒计时网页给你一段代码让你自己复制自己建文件自己贴进去你说帮我运行看看告诉你你可以按自己去运行把结果告诉你运行报错了告诉你可能是括号的问题自己找到第报错的地方改掉再跑一次你的工作量每一步都得自己动手只在开头说一句话看到区别了吗差别不在聪不聪明而在有没有手二不是更聪明的而是给脑子配了一双手手到底是什么东西先说结论这句话可能有些令人难以置信但它是真的的手本身一点都不智能它就是一段段普普通通的程序这些程序有个统一的名字叫工具你可以把它理解成一排按钮按钮工具按下去会发生什么读文件把某个文件的内容读出来变成文字写文件把一段文字写进某个文件里运行程序执行一条命令把屏幕上出现的结果抓下来上网搜去搜索引擎查一下把结果抓回来打开网页打开一个网址把页面内容抓回来点鼠标敲键盘真的去操作界面这些按钮有的是操作系统本来就有的能力有的是工程师专门写的程序它们没有一个会思考会思考的是玻璃盒子里那个脑子那它们是怎么配合的第一步脑子说出一张纸条大模型想清楚下一步该干什么之后它吐出来的不是普通的聊天文字而是一段格式很规整的文字大意是我要用写文件这个工具文件名内容你可以把它想成一张写得非常规矩的便条上面写清楚了用哪个工具参数是什么不同产品这张纸条长得并不一样有的还带着一堆你看不懂的符号但大意永远是这两个信息用什么怎么用你不用看懂格式因为这是写给看的你只需要知道它是在递纸条就够了第二步的程序读这张纸条外面那个程序也就是看懂了这张便条就去真的按按钮打开文件写入内容保存第三步把结果写成文字塞回盒子里干完或者干砸了之后程序会把结果变成一段文字比如已创建写入行或者报错第行缺少这段文字会被重新送进玻璃盒子变成大模型下一轮能读到的新第四步脑子读完再说下一张纸条就这样一张纸条一次动手一张回执再一张纸条如此循环往复活儿就一点点干完了这就像你隔着玻璃指挥一位手很巧的师傅你不能直接碰他的工具只能递纸条他也不能自己决定干什么只能照纸条做但只要你纸条写得够细他什么都能替你干关键它不会自己拿主意这里有个特别容易被误解的地方很多人以为是一个有自己的想法会自己规划自己决定干多久的不是的它每一步都在等纸条没有纸条它就干等着它不知道这个任务大概要几步也不知道我是不是该收手了更不会在半夜突然爬起来帮你整理硬盘它只会做一件事看着眼前的文字想出下一步该干什么然后说出来至于下一步和下下步之间怎么衔接什么时候停出错了几次要不要放弃这些是外面那个程序和写它的人定的规矩一句话记住脑子负责想下一步程序负责做这一步没有人负责想全局除了你所以它俩必须组队现在我们把两半拼起来大模型脑子手会想会写会解释会建文件会运行但碰不到任何东西但不会自己决定干什么有脑子没有手有手不会动脑组队一个能替你干活的一个负责想一个负责做这就是为什么你只打了一句话电脑就自己动起来了不是长了手是有人把一双手接在了一个脑子后面三为什么非得一步步循环着来直接一步到位不行吗看到这儿很多人会有个疑问既然它这么聪明为什么不一次把整个网页写完一次跑完非要一轮一轮来三个原因一个比一个实在它一次只能说一小段大模型每次能吐出来的是有上限的这个上限不算小但放不下一整个项目一个像样的网页加起来几百上千行换算成是几万块而它一次只能说一部分就像你让一个人一口气背完一本书不是他不懂是他一口气背不完它不知道结果就没法决定下一步这是更根本的原因第轮结束的时候大模型并不知道代码能不能跑它只知道我写完了在不知道结果的情况下它没法决定下一步该干什么是继续加功能还是先修还是已经可以交付了所以它必须停下来等回执回执没回来之前它就是个等消息的人这就像你打电话教电话那头的朋友开你家抽屉你说先开左边第一个他开完告诉你开了里面有个盒子你才能说把盒子拿出来你不可能一口气说完五十步因为你不知道每一步做完之后现场变成什么样了活儿越长越容易跑偏还有一个现实问题轮数一多它就容易忘事绕圈重复原因我们后面会讲跟的账有关你现在只需要知道干活本质上是一个必须反复确认的过程不是设计得笨是它天生就只能这样干所以会拆步骤比聪明更重要这句话你可能想不到但它特别重要干得好不好很大程度不取决于脑子多聪明而取决于每一步拆得够不够小每一步足够小它就能一步一确认错了马上改每一步太大它就容易一口气错到底这也是为什么你用的时候把话说清楚把任务说小特别管用四同一个圈能干的事远不止写代码写代码只是最好演示的一种因为这个圈是通用的同样这四步换成别的事一样转你说的话它转的圈把第三段改正式一点读文档改那一段存回去检查有没有改坏把照片按月份整理好列出照片读拍摄日期建文件夹一个个移动帮我查一下明天的天气搜索打开网页抄下天气回答你把这份表格做成图表读表格算数生成图存成文件盯着这个网页降价了告诉我定时打开读价格比较通知你看出来了吗它们的骨架是同一个说一步做一步看结果再说下一步写代码是它改文档是它整理文件是它查资料还是它你以后看到任何助手智能体打工之类的宣传只要它在自己动手做事背后几乎都是这个圈五那到底花在哪儿了好原理讲完了现在讲一个跟你的钱包直接相关的问题很多人第一次用会觉得奇怪我就问了一句话怎么感觉比聊天费这么多因为每转一圈都在花钱而且越转越贵每一轮它都要重读一遍这是最反直觉也最要命的一点大模型没有记忆它不像人聊完了还记得它每次被调用都是从零开始看一遍别人递给它的全部文字那全部文字包括什么每一轮它要读的东西说明身份说明开头那段你是一个编程助手你可以使用以下工具之前的全部对话你说的每一句它说的每一句之前的全部回执每一次已创建已写入报错在第行这一轮的新回执刚刚发生的那件事注意这些全部要重新读一遍全部要重新算钱第轮它读一小段第轮它读一小段第轮的全部内容第轮它读一小段前两轮的全部内容这就是越转越贵的来源这就像每干一步都要把前面所有的工作记录重新念一遍给你听干到第十步的时候光念记录就比干活本身费时间为什么比聊天贵那么多我们把两种用法摆在一起普通聊天干活你发多少字一次一次模型被调用几次次可能几十次每次要读多少内容你这段话你这段话全部历史全部回执输出多少一段回答每轮都要输出纸条代码说明同样一个问题聊天是一次买卖是几十次买卖而且每一次都比上一次更贵所以你看到的现象就都能解释了为什么干一个活儿账单比聊天高一个数量级为什么它干到一半会突然变慢前面要读的东西太多了为什么长任务干到后面它会开始忘事不是它笨是前面塞的东西太多把白板占满了小知识上一篇讲过的上下文窗口在这里就变成了一个很具体的问题转的圈越多那块白板就越挤挤满了最早的内容就得被挤出去它就开始失忆一张示意账单不是精确数字看结构就行下面这张表因为不同模型不同工具差得太远所以我们只需要看个大概仅作参考即可每一轮烧钱的地方大致量级身份说明每次都重读一两千每轮都付历史记录越滚越长每轮都在涨你的需求可能几十很便宜回执报错信息可能很长从几十到几千都有可能它吐出来的内容输出更贵通常比输入贵好几倍结论一次完整的任务消耗常常是同样问题问一次聊天的十倍以上具体多少取决于它转了多少圈重要提醒你平时用的大部分产品包括各种编程助手并不会把账单摊给你看它们要么包月要么按次数扣额度但后台算的就是这笔账所以你才会看到用着用着额度就没了三个能立刻省钱的习惯关于如何使用才能更省钱这边慧妈直接给你三条有用的建议第一条把任务说小说清楚对比一下帮我做个网站做一个单页的倒计时网页只有一个显示距离年月日还有多少天白底黑字不要多余功能第二种它可能轮就干完了第一种它可能先问你三个问题再猜你的意思转十圈最后做出来的还不是你要的你省下的每一圈都是真金白银第二条让它先说计划再动手这是一个反直觉但特别有用的技巧在让它干活之前先说一句先别动手把你打算怎么做分几步告诉我它吐一份计划大约几百个很便宜你看一眼如果方向错了这时候叫停你只损失了几百如果方向对了你再让它干这一步能帮你省掉后面一大半白转的圈第三条简单的事别用想查个概念写段文案翻译一段话聊天就够了想改你电脑上的文件想跑程序想操作网页才需要用牛刀杀鸡不是不行是费钱第四条最省钱的一条直接不使用就行了不使用就不花钱肯定省钱啊六几个你一定会好奇的问题问不就是自动点鼠标的脚本吗答不是脚本是写死了的第一步点这里第二步点那里遇到意外就卡住是每一步现想的它看到报错会换一种方法再试看到页面变了会重新判断该点哪儿脚本不会想每一轮都在想当然代价就是它比脚本慢比脚本贵而且有时候想歪问它会不会假装干完了答会而且这是它最讨厌的毛病之一因为大模型只是在猜下一句最像样的话当它猜任务完成了我该说完成了的时候它可能根本不知道到底完成没有它只是觉得这句话很合理所以你会遇到它说已经帮你改好了你一看文件根本没动奇怪怎么有点像你豆姐判断方法别听它说去看结果文件真的变了吗程序真的跑通了吗网页真的打开了吗它的话是转述不是证据问为什么它有时候会绕圈死循环答三个常见原因同一个报错反复出现它每次都想再试一次但没想到换个思路它看不到自己的进度以为自己还没开始上下文挤满了前面试过什么它已经忘了于是又试一遍所以几乎所有都有个隐藏设定最多转多少圈就强制停下这个上限就是防它转到天荒地老的问它会不会把我文件删了答有可能它有写文件这只手那删文件覆盖文件通常也在能力范围里而且它不理解什么叫重要在它眼里一个文件和一个备份文件没有区别所以第一次用慧妈的建议很朴素先在没用的文件夹里试重要的东西先备份别一上来就让它整理你的整个盘问它是不是真的看见网页了答这个问题问得特别好大多数情况下它没看见它读到的是网页被转成的文字少数会截图的它看见的也是被切成一块块的图片从头到尾它都没有眼睛它只有递进来的文字问我完全不懂代码能用吗答能而且你比程序员更需要它但有一件事你得接受你得能判断它干得对不对它做完一个网页你要能打开看看长得对不对它整理完照片你要能翻一翻有没有放错你不需要会写但你得会验收这句话希望你记一辈子问那我把活儿全交给它不就完了答先别它有手但它不会替你想这事儿该不该做方向是你定的验收是你做的责任也是你的它只是个执行力特别强但完全没有主见的帮手七注意事项第一次用请守住这几条前面讲的都是它怎么干活这一节讲你怎么不出事因为有手的东西和有脑子的东西风险完全不一样权限能少给就少给让它只能碰一个文件夹就别给它整个硬盘能用只读的就别给它可写这就像你请人来家里修水管你会把整串钥匙给他吗密码密钥一个字都别给它它读到的每一个字都会变成都可能被发到服务器上记住一句话凡是你不愿意贴在公网上的东西都别贴进对话框重要操作让它先说再做删文件改系统设置发邮件下单转账这类事先让它把打算做什么写出来给你看一定要验收它说完成你去看结果它说测试通过你自己点一下它是执行者不是担保人给它一个止损线长任务开始前先跟它说清楚最多试次次还不行就停下来告诉我不然它可能在一个小坑里转到你的额度烧完结语好了以上便是本期教学的所有内容了我们回到开头那三个问题刚才是谁在打字是的程序它照着大模型吐出来的纸条一个一个字符地敲进去是谁点的运行还是大模型只说了运行一下真正按下那个按钮的是程序有手吗没有大模型没有手它被关在玻璃盒子里碰不到你的任何东西它能做的只有说但它身边站着一个有手的东西那个东西叫而它俩之间来回递的不是眼神不是手势不是感觉是一张一张的纸条一个一个的所以这篇文章如果只能留一句话给你慧妈希望是这句没有手它只是用指挥了一双别人的手而想通这件事之后很多原本莫名其妙的现象就都对上了为什么它必须一轮一轮来因为不看到回执它不知道下一步为什么它看不见报错却知道改哪儿因为报错被抄成文字递进去了为什么它有时候会假装干完了因为它只是在猜下一句最像样的话为什么它干活比聊天贵那么多因为每一轮都要把前面全部重读一遍为什么它干到后面会忘事因为上下文被塞满了你以为它在看你的电脑其实它只是在读别人递给它的字本文数据说明文中的轮数步骤纸条内容都是按新年倒计时网页这个例子做的示意目的是让你看清结构不是某一次真实运行的日志关于账单的介绍数据仅作参考并非真实数据因为不同模型不同工具不同任务差别极大写死了反而会误导你你要记住的是概念每轮重读历史输出比输入贵越转越贵各家产品的计费方式包月按次按随时会变具体以官网当期说明为准最后不要忘了关注慧妈收藏此博客我会在这上面更新更多教学内容你们的关注与打赏是慧妈更新的最大动力',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-10-19 23:08:36',
+  postMainColor: '#425AEF',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 8.1.2"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAMEanmY3uehvi1ZgUrLoj1jn-mfwtAAAssQaxt44dFXY2WbqFjz2RsBAAMCAAN4AAM9BA"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">慧妈的博客</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 全部文章</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://lennax.top/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> Lennax的博客</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="wxp://f2f0yeq-ExvuLkEbG6h9Rq68lujfb2RdKWRr4X-ovaWbptY" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAMFanmglhLB83v2pQ4MoY_7uWv6t2YAAugQaxt44dFXu7N8Zz5ZXn0BAAMCAANtAAM9BA"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://qr.alipay.com/fkx15080bn99l0v2cxegf05" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAMGanmhQdoAAZ2UFX5QUSKTJ3uUYLdmAALqEGsbeOHRV6_bS35pDm1yAQADAgADeAADPQQ"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 1.05rem;">AI<sup>2</sup></a><a href="/tags/%E5%AE%89%E5%85%A8%E4%B8%8A%E7%BD%91/" style="font-size: 1.05rem;">安全上网<sup>3</sup></a><a href="/tags/%E5%B0%8F%E7%99%BD%E5%BF%85%E7%9C%8B/" style="font-size: 1.05rem;">小白必看<sup>7</sup></a><a href="/tags/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">常用工具<sup>2</sup></a><a href="/tags/%E5%B9%B2%E8%B4%A7%E6%BB%A1%E6%BB%A1/" style="font-size: 1.05rem;">干货满满<sup>7</sup></a><a href="/tags/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" style="font-size: 1.05rem;">持续更新<sup>9</sup></a><a href="/tags/%E6%95%99%E5%AD%A6/" style="font-size: 1.05rem;">教学<sup>9</sup></a><a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 1.05rem;">日常<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/" style="font-size: 1.05rem;">网络知识<sup>1</sup></a><a href="/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" style="font-size: 1.05rem;">自我介绍<sup>1</sup></a><a href="/tags/%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/" style="font-size: 1.05rem;">装机必备<sup>3</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD/" style="font-size: 1.05rem;">软件下载<sup>3</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/10/"><span class="card-archive-list-date">十月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/09/"><span class="card-archive-list-date">九月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/08/"><span class="card-archive-list-date">八月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%99%E5%AD%A6%E5%86%85%E5%AE%B9/" itemprop="url">教学内容</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E6%95%99%E5%AD%A6/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>教学</span></a><a class="article-meta__tags" href="/tags/AI/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>AI</span></a><a class="article-meta__tags" href="/tags/%E5%B0%8F%E7%99%BD%E5%BF%85%E7%9C%8B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>小白必看</span></a><a class="article-meta__tags" href="/tags/%E5%B9%B2%E8%B4%A7%E6%BB%A1%E6%BB%A1/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>干货满满</span></a><a class="article-meta__tags" href="/tags/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>持续更新</span></a></span></div></div><h1 class="post-title" itemprop="name headline">Agent是怎么通过Token帮你干活的？</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-10-19T15:08:21.000Z" title="发表于 2026-10-19 23:08:21">2026-10-19</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-10-19T15:08:36.093Z" title="更新于 2026-10-19 23:08:36">2026-10-19</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">6.3k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>18分钟</span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为武汉"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>武汉</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOIatYyET_qVoMb-Q0xXBRyIAyfdI0AAgcTaxtZLLFWCA-Phd4hwvcBAAMCAAN4AAM9BA"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://example.com/%E6%96%87%E7%AB%A0/Agent%E6%98%AF%E6%80%8E%E4%B9%88%E9%80%9A%E8%BF%87Token%E5%B8%AE%E4%BD%A0%E5%B9%B2%E6%B4%BB%E7%9A%84%EF%BC%9F/"><header><a class="post-meta-categories" href="/categories/%E6%95%99%E5%AD%A6%E5%86%85%E5%AE%B9/" itemprop="url">教学内容</a><a href="/tags/%E6%95%99%E5%AD%A6/" tabindex="-1" itemprop="url">教学</a><a href="/tags/AI/" tabindex="-1" itemprop="url">AI</a><a href="/tags/%E5%B0%8F%E7%99%BD%E5%BF%85%E7%9C%8B/" tabindex="-1" itemprop="url">小白必看</a><a href="/tags/%E5%B9%B2%E8%B4%A7%E6%BB%A1%E6%BB%A1/" tabindex="-1" itemprop="url">干货满满</a><a href="/tags/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" tabindex="-1" itemprop="url">持续更新</a><h1 id="CrawlerTitle" itemprop="name headline">Agent是怎么通过Token帮你干活的？</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">Hui</span><time itemprop="dateCreated datePublished" datetime="2026-10-19T15:08:21.000Z" title="发表于 2026-10-19 23:08:21">2026-10-19</time><time itemprop="dateCreated datePublished" datetime="2026-10-19T15:08:36.093Z" title="更新于 2026-10-19 23:08:36">2026-10-19</time></header><div class="video-container">
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=117462674773673&bvid=BV1cpnV6tE1h&cid=42852945522&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+</div>
+
+<style>
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<h1 id="开头"><a href="#开头" class="headerlink" title="开头"></a>开头</h1><p>当你打开了Codex、Claude code、deepseek harness或者其他Agent软件，在一个对话框里打了一句话：</p>
+<blockquote>
+<p>帮我做一个新年倒计时网页</p>
+</blockquote>
+<p>然后按下回车。</p>
+<p>接下来十秒钟，大概是这样的：</p>
+<ul>
+<li>左边空白的文件列表里，”啪”地冒出一个 <code>index.html</code></li>
+<li>中间的代码编辑器，一行一行的代码自己往下长</li>
+<li>命令行里跳出”运行中……”</li>
+<li>浏览器弹出来，结果是个红通通的报错</li>
+<li>编辑器自己跳到了第 12 行，代码自己补上了一个括号</li>
+<li>再运行一次，浏览器里，倒计时动起来了</li>
+</ul>
+<p><strong>而你，从头到尾只做了一件事：打了那一句话。</strong></p>
+<p>没有点”新建文件”，没有敲一个字母，没有点”运行”，连报错都不是你改的。</p>
+<p>于是有三个问题，几乎是同时从脑子里蹦出来的：</p>
+<blockquote>
+<p><strong>刚才，是谁在打字？</strong></p>
+<p><strong>是谁点的”运行”？</strong></p>
+<p><strong>AI……有手吗？</strong></p>
+</blockquote>
+<p>这三个问题，就是这篇文章要回答的全部内容。</p>
+<p>如果你看过上一篇《什么是 Token？AI 眼里的文字，为什么不是字？》，那你已经知道”AI 是在处理一块块 token”。<strong>这一篇就是它的下一集</strong>：我们把这十秒钟拆开，一格一格地看——<strong>一个只会”说” token 的大模型，是怎么样通过 token，把活儿一步步干完的。</strong></p>
+<p>如果你上一篇没看，也没关系。这篇里凡是需要用到 token 的地方，慧妈都会用一句话再给你补一遍，你顺着往下看就行。</p>
+<p><strong>先补一句最要紧的</strong>：</p>
+<blockquote>
+<p><strong>token 是 AI 处理信息的最小单位，你可以直接把它叫”块”。</strong></p>
+<p>AI 眼里的文字，不是一个个字，而是一块一块的积木。它读的是块，说的也是块。</p>
+<p>这一篇你只要记住这一句就够了，剩下的不用管。</p>
+</blockquote>
+<h2 id="先说清楚：这篇你会得到什么"><a href="#先说清楚：这篇你会得到什么" class="headerlink" title="先说清楚：这篇你会得到什么"></a>先说清楚：这篇你会得到什么</h2><p>看完之后，下面这五件事你都能讲给别人听：</p>
+<ol>
+<li><strong>为什么聊天 AI 只能”教你做”，而 Agent 能”替你做”</strong></li>
+<li><strong>大模型被关在”玻璃盒子”里是什么意思</strong></li>
+<li><strong>一句需求，在 AI 内部是怎么变成”一张纸一张纸”传下去的</strong></li>
+<li><strong>为什么它非要来回”转圈”，不能一步干完</strong></li>
+<li><strong>为什么 Agent 干活，比聊天费 token 费得多</strong></li>
+</ol>
+<p>准备好了吗？我们从最简单的那个问题开始。</p>
+<h1 id="知识科普"><a href="#知识科普" class="headerlink" title="知识科普"></a>知识科普</h1><h2 id="一、先把”AI”这个字拆成两半：一个脑子，一双手"><a href="#一、先把”AI”这个字拆成两半：一个脑子，一双手" class="headerlink" title="一、先把”AI”这个字拆成两半：一个脑子，一双手"></a>一、先把”AI”这个字拆成两半：一个脑子，一双手</h2><p>我们平时说的”AI”，其实是一个很含糊的词。要搞懂 Agent，第一件事就是把脑子里那个模糊的”AI”，<strong>拆成两样东西</strong>：</p>
+<blockquote>
+<p><strong>一个脑子 · 一双手</strong></p>
+</blockquote>
+<h3 id="1-脑子：那个只会说话的大模型"><a href="#1-脑子：那个只会说话的大模型" class="headerlink" title="1. 脑子：那个只会说话的大模型"></a>1. 脑子：那个只会说话的大模型</h3><p>你平时聊天用的那个东西——DeepSeek、ChatGPT、豆包、千问——它的正式名字叫<strong>大模型</strong>（你也可以叫它”模型”）。</p>
+<p>慧妈用一个不严谨但很好用的说法描述它：</p>
+<p><strong>大模型是一台”文字接龙机器”。</strong></p>
+<p>你给它一段话，它就一个 token 一个 token 地往后猜，猜出一段新的文字给你。它猜得非常好，好到你觉得它在”思考”。但不管它内部多复杂，<strong>它对外能做的事情只有一件：吐出 token。</strong></p>
+<p>注意这句话，它是这篇文章的地基：</p>
+<blockquote>
+<p><strong>大模型唯一的”输出”，就是一串 token。</strong></p>
+<p>它不会新建文件，不会敲键盘，不会点鼠标，不会运行程序。</p>
+</blockquote>
+<p>它连”保存”都不会。</p>
+<h3 id="2-玻璃盒子：它在服务器里，碰不到你桌上的任何东西"><a href="#2-玻璃盒子：它在服务器里，碰不到你桌上的任何东西" class="headerlink" title="2. 玻璃盒子：它在服务器里，碰不到你桌上的任何东西"></a>2. 玻璃盒子：它在服务器里，碰不到你桌上的任何东西</h3><p>那大模型跑在哪儿？——<strong>跑在别人的机房里，跑在服务器上。</strong></p>
+<p>它不在你的电脑里。它没有你桌面上的文件列表，没有你的 C 盘 D 盘，看不到你的浏览器，也摸不到你的鼠标。</p>
+<p>这里我打个比方：</p>
+<blockquote>
+<p><strong>💡 这就像</strong>：一位被关在玻璃房里的老师傅。你能听见他说话，他也能听见你说话，他懂的东西非常多，什么都会——<strong>但他伸手，只能摸到玻璃。</strong></p>
+</blockquote>
+<p>所以你在聊天框里问它”帮我把桌面上的照片按月份整理一下”，它只能回你：</p>
+<blockquote>
+<p>“好的，你可以先新建几个文件夹，分别命名为 1 月、2 月……然后把照片拖进去。”</p>
+</blockquote>
+<p>它讲得一点没错，甚至很详细。<strong>但活还是你自己干的。</strong></p>
+<p><strong>因为它的手，被玻璃挡住了。</strong></p>
+<h3 id="3-所以，只有脑子的-AI，只能”教”你"><a href="#3-所以，只有脑子的-AI，只能”教”你" class="headerlink" title="3. 所以，只有脑子的 AI，只能”教”你"></a>3. 所以，只有脑子的 AI，只能”教”你</h3><p>我们把这两种体验放在一起对比，你立刻就懂了：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>只有一个脑子（聊天 AI）</th>
+<th>有脑子 + 有手（Agent）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>你说”帮我做个倒计时网页”</td>
+<td>给你一段代码，让你自己复制</td>
+<td>自己建文件、自己贴进去</td>
+</tr>
+<tr>
+<td>你说”帮我运行看看”</td>
+<td>告诉你”你可以按 F5”</td>
+<td>自己去运行，把结果告诉你</td>
+</tr>
+<tr>
+<td>运行报错了</td>
+<td>告诉你”可能是括号的问题”</td>
+<td>自己找到第报错的地方，改掉，再跑一次</td>
+</tr>
+<tr>
+<td>你的工作量</td>
+<td><strong>每一步都得自己动手</strong></td>
+<td><strong>只在开头说一句话</strong></td>
+</tr>
+</tbody></table>
+<p>看到区别了吗？</p>
+<p><strong>差别不在”聪不聪明”，而在”有没有手”。</strong></p>
+<h2 id="二、Agent-不是”更聪明的-AI”，而是”给脑子配了一双手”"><a href="#二、Agent-不是”更聪明的-AI”，而是”给脑子配了一双手”" class="headerlink" title="二、Agent 不是”更聪明的 AI”，而是”给脑子配了一双手”"></a>二、Agent 不是”更聪明的 AI”，而是”给脑子配了一双手”</h2><h3 id="1-“手”到底是什么东西"><a href="#1-“手”到底是什么东西" class="headerlink" title="1. “手”到底是什么东西"></a>1. “手”到底是什么东西</h3><p>先说结论，这句话可能有些令人难以置信，但它是真的：</p>
+<blockquote>
+<p><strong>Agent 的”手”，本身一点都不智能。它就是一段段普普通通的程序。</strong></p>
+</blockquote>
+<p>这些程序有个统一的名字，叫<strong>工具</strong>（tool）。你可以把它理解成<strong>一排按钮</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>按钮（工具）</th>
+<th>按下去会发生什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>读文件</td>
+<td>把某个文件的内容读出来，变成文字</td>
+</tr>
+<tr>
+<td>写文件</td>
+<td>把一段文字写进某个文件里</td>
+</tr>
+<tr>
+<td>运行程序</td>
+<td>执行一条命令，把屏幕上出现的结果抓下来</td>
+</tr>
+<tr>
+<td>上网搜</td>
+<td>去搜索引擎查一下，把结果抓回来</td>
+</tr>
+<tr>
+<td>打开网页</td>
+<td>打开一个网址，把页面内容抓回来</td>
+</tr>
+<tr>
+<td>点鼠标、敲键盘</td>
+<td>真的去操作界面</td>
+</tr>
+</tbody></table>
+<p>这些”按钮”，有的是操作系统本来就有的能力，有的是工程师专门写的程序。<strong>它们没有一个会思考。</strong></p>
+<p>会思考的，是玻璃盒子里那个脑子。</p>
+<h3 id="2-那它们是怎么配合的？"><a href="#2-那它们是怎么配合的？" class="headerlink" title="2. 那它们是怎么配合的？"></a>2. 那它们是怎么配合的？</h3><p><strong>第一步：脑子”说”出一张纸条。</strong></p>
+<p>大模型想清楚”下一步该干什么”之后，它吐出来的 token 不是普通的聊天文字，而是<strong>一段格式很规整的文字</strong>，大意是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">我要用「写文件」这个工具</span><br><span class="line">文件名：index.html</span><br><span class="line">内容：&lt;!DOCTYPE html&gt;...</span><br></pre></td></tr></table></figure>
+
+<p>你可以把它想成一张<strong>写得非常规矩的便条</strong>：上面写清楚了”用哪个工具、参数是什么”。</p>
+<p>（不同产品这张纸条长得并不一样，有的还带着一堆你看不懂的符号。但<strong>大意永远是这两个信息：用什么、怎么用</strong>。你不用看懂格式，因为这是写给Agent看的，你只需要知道”它是在递纸条”就够了。）</p>
+<p><strong>第二步：Agent 的程序”读”这张纸条。</strong></p>
+<p>外面那个程序（也就是 Agent）看懂了这张便条，就去<strong>真的按按钮</strong>——打开文件、写入内容、保存。</p>
+<p><strong>第三步：Agent 把结果”写”成文字，塞回盒子里。</strong></p>
+<p>干完（或者干砸了）之后，程序会把结果变成一段文字，比如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">已创建 index.html，写入 19 行</span><br></pre></td></tr></table></figure>
+
+<p>或者：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">报错：第 12 行 SyntaxError，缺少 )</span><br></pre></td></tr></table></figure>
+
+<p>这段文字，会被重新送进玻璃盒子，<strong>变成大模型下一轮能读到的新 token</strong>。</p>
+<p><strong>第四步：脑子读完，再说下一张纸条。</strong></p>
+<p>就这样，一张纸条、一次动手、一张回执、再一张纸条……如此循环往复，<strong>活儿就一点点干完了。</strong></p>
+<blockquote>
+<p><strong>💡 这就像</strong>：你隔着玻璃指挥一位手很巧的师傅。你不能直接碰他的工具，只能递纸条；他也不能自己决定干什么，只能照纸条做。但只要你纸条写得够细，他什么都能替你干。</p>
+</blockquote>
+<h3 id="3-关键：它不会自己拿主意"><a href="#3-关键：它不会自己拿主意" class="headerlink" title="3. 关键：它不会自己拿主意"></a>3. 关键：它不会自己拿主意</h3><p>这里有个特别容易被误解的地方：</p>
+<p>很多人以为 Agent 是”一个有自己的想法、会自己规划、自己决定干多久的 AI”。</p>
+<p><strong>不是的。</strong></p>
+<p>它每一步都在等纸条。<strong>没有纸条，它就干等着。</strong></p>
+<p>它不知道”这个任务大概要几步”，也不知道”我是不是该收手了”，更不会在半夜突然爬起来帮你整理硬盘。它只会做一件事：</p>
+<blockquote>
+<p><strong>看着眼前的文字，想出下一步该干什么，然后说出来。</strong></p>
+</blockquote>
+<p>至于”下一步”和”下下步”之间怎么衔接、什么时候停、出错了几次要不要放弃——<strong>这些是外面那个程序（Agent）和写它的人定的规矩。</strong></p>
+<blockquote>
+<p><strong>💡 一句话记住</strong>：脑子负责”想下一步”，程序负责”做这一步”，<strong>没有人负责”想全局”</strong>——除了你。</p>
+</blockquote>
+<h3 id="4-所以，它俩必须组队"><a href="#4-所以，它俩必须组队" class="headerlink" title="4. 所以，它俩必须组队"></a>4. 所以，它俩必须组队</h3><p>现在我们把两半拼起来：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">┌──────────────────────┐        ┌──────────────────────┐</span><br><span class="line">│      大模型（脑子）    │        │      Agent（手）      │</span><br><span class="line">│                      │        │                      │</span><br><span class="line">│  会想，会写，会解释    │        │  会建文件，会运行     │</span><br><span class="line">│  但碰不到任何东西      │        │  但不会自己决定干什么  │</span><br><span class="line">│                      │        │                      │</span><br><span class="line">│      有脑子，没有手    │   +    │      有手，不会动脑    │</span><br><span class="line">└──────────────────────┘        └──────────────────────┘</span><br><span class="line">                    ↓</span><br><span class="line">        ┌───────────────────────────────┐</span><br><span class="line">        │   组队 = 一个能替你干活的 AI    │</span><br><span class="line">        └───────────────────────────────┘</span><br></pre></td></tr></table></figure>
+
+<p><strong>一个负责”想”，一个负责”做”。</strong></p>
+<p>这就是为什么你只打了一句话，电脑就自己动起来了——<strong>不是 AI 长了手，是有人把一双手，接在了一个脑子后面。</strong></p>
+<h2 id="三、为什么非得一步步循环着来？直接一步到位不行吗？"><a href="#三、为什么非得一步步循环着来？直接一步到位不行吗？" class="headerlink" title="三、为什么非得一步步循环着来？直接一步到位不行吗？"></a>三、为什么非得一步步循环着来？直接一步到位不行吗？</h2><p>看到这儿，很多人会有个疑问：</p>
+<blockquote>
+<p>既然它这么聪明，为什么不一次把整个网页写完、一次跑完？非要一轮一轮来？</p>
+</blockquote>
+<p>三个原因，一个比一个实在。</p>
+<h3 id="1-它一次只能说”一小段”"><a href="#1-它一次只能说”一小段”" class="headerlink" title="1. 它一次只能说”一小段”"></a>1. 它一次只能说”一小段”</h3><p>大模型每次能吐出来的 token 是有上限的。这个上限不算小，但<strong>放不下一整个项目</strong>。</p>
+<p>一个像样的网页，HTML、CSS、JS 加起来几百上千行，换算成 token 是几万块。而它一次只能”说”一部分。</p>
+<p><strong>就像你让一个人一口气背完一本书——不是他不懂，是他一口气背不完。</strong></p>
+<h3 id="2-它不知道结果，就没法决定下一步"><a href="#2-它不知道结果，就没法决定下一步" class="headerlink" title="2. 它不知道结果，就没法决定下一步"></a>2. 它不知道结果，就没法决定下一步</h3><p>这是更根本的原因。</p>
+<p>第 2 轮结束的时候，大模型<strong>并不知道代码能不能跑</strong>。它只知道”我写完了”。</p>
+<p><strong>在不知道结果的情况下，它没法决定下一步该干什么</strong>——是继续加功能？还是先修 bug？还是已经可以交付了？</p>
+<p>所以它必须停下来，等回执。</p>
+<p><strong>回执没回来之前，它就是个”等消息的人”。</strong></p>
+<blockquote>
+<p><strong>💡 这就像</strong>：你打电话教电话那头的朋友开你家抽屉。你说”先开左边第一个”，他开完告诉你”开了，里面有个盒子”，你才能说”把盒子拿出来”。<strong>你不可能一口气说完五十步</strong>——因为你不知道每一步做完之后，现场变成什么样了。</p>
+</blockquote>
+<h3 id="3-活儿越长，越容易”跑偏”"><a href="#3-活儿越长，越容易”跑偏”" class="headerlink" title="3. 活儿越长，越容易”跑偏”"></a>3. 活儿越长，越容易”跑偏”</h3><p>还有一个现实问题：<strong>轮数一多，它就容易忘事、绕圈、重复。</strong></p>
+<p>原因我们后面会讲——跟 token 的”账”有关。你现在只需要知道：</p>
+<blockquote>
+<p><strong>Agent 干活，本质上是一个”必须反复确认”的过程。</strong></p>
+<p><strong>不是设计得笨，是它天生就只能这样干。</strong></p>
+</blockquote>
+<h3 id="4-所以，”会拆步骤”比”聪明”更重要"><a href="#4-所以，”会拆步骤”比”聪明”更重要" class="headerlink" title="4. 所以，”会拆步骤”比”聪明”更重要"></a>4. 所以，”会拆步骤”比”聪明”更重要</h3><p>这句话你可能想不到，但它特别重要：</p>
+<blockquote>
+<p><strong>Agent 干得好不好，很大程度不取决于脑子多聪明，而取决于”每一步拆得够不够小”。</strong></p>
+</blockquote>
+<p>每一步足够小，它就能一步一确认，错了马上改。<br>每一步太大，它就容易一口气错到底。</p>
+<p><strong>这也是为什么你用 Agent 的时候，”把话说清楚、把任务说小”特别管用。</strong></p>
+<h2 id="四、同一个圈，能干的事远不止写代码"><a href="#四、同一个圈，能干的事远不止写代码" class="headerlink" title="四、同一个圈，能干的事远不止写代码"></a>四、同一个圈，能干的事远不止写代码</h2><p>写代码只是最好演示的一种。<strong>因为这个圈是通用的。</strong></p>
+<p>同样这四步，换成别的事，一样转：</p>
+<table>
+<thead>
+<tr>
+<th>你说的话</th>
+<th>它转的圈</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>“把第三段改正式一点”</td>
+<td>读文档 → 改那一段 → 存回去 → 检查有没有改坏</td>
+</tr>
+<tr>
+<td>“把照片按月份整理好”</td>
+<td>列出照片 → 读拍摄日期 → 建文件夹 → 一个个移动</td>
+</tr>
+<tr>
+<td>“帮我查一下明天的天气”</td>
+<td>搜索 → 打开网页 → 抄下天气 → 回答你</td>
+</tr>
+<tr>
+<td>“把这份表格做成图表”</td>
+<td>读表格 → 算数 → 生成图 → 存成文件</td>
+</tr>
+<tr>
+<td>“盯着这个网页，降价了告诉我”</td>
+<td>定时打开 → 读价格 → 比较 → 通知你</td>
+</tr>
+</tbody></table>
+<p><strong>看出来了吗？它们的骨架，是同一个：</strong></p>
+<blockquote>
+<p><strong>说一步 → 做一步 → 看结果 → 再说下一步</strong></p>
+</blockquote>
+<p><strong>写代码是它，改文档是它，整理文件是它，查资料还是它。</strong></p>
+<p>你以后看到任何”AI 助手”、”AI 智能体”、”AI 打工”之类的宣传，<strong>只要它在”自己动手做事”，背后几乎都是这个圈。</strong></p>
+<h2 id="五、那-token-到底花在哪儿了？"><a href="#五、那-token-到底花在哪儿了？" class="headerlink" title="五、那 token 到底花在哪儿了？"></a>五、那 token 到底花在哪儿了？</h2><p>好，原理讲完了。现在讲一个跟<strong>你的钱包</strong>直接相关的问题。</p>
+<p>很多人第一次用 Agent 会觉得奇怪：</p>
+<blockquote>
+<p>我就问了一句话，怎么感觉比聊天费这么多？</p>
+</blockquote>
+<p><strong>因为 Agent 每转一圈，都在花钱。而且越转越贵。</strong></p>
+<h3 id="1-每一轮，它都要”重读一遍”"><a href="#1-每一轮，它都要”重读一遍”" class="headerlink" title="1. 每一轮，它都要”重读一遍”"></a>1. 每一轮，它都要”重读一遍”</h3><p>这是最反直觉、也最要命的一点。</p>
+<p>大模型<strong>没有记忆</strong>。它不像人，聊完了还记得。它每次被调用，都是<strong>从零开始看一遍别人递给它的全部文字</strong>。</p>
+<p>那”全部文字”包括什么？</p>
+<table>
+<thead>
+<tr>
+<th>每一轮它要读的东西</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>身份说明</strong></td>
+<td>开头那段”你是一个编程助手，你可以使用以下工具……”</td>
+</tr>
+<tr>
+<td><strong>之前的全部对话</strong></td>
+<td>你说的每一句、它说的每一句</td>
+</tr>
+<tr>
+<td><strong>之前的全部回执</strong></td>
+<td>每一次”已创建”、”已写入”、”报错在第 12 行”</td>
+</tr>
+<tr>
+<td><strong>这一轮的新回执</strong></td>
+<td>刚刚发生的那件事</td>
+</tr>
+</tbody></table>
+<p><strong>注意：这些全部要重新读一遍，全部要重新算钱。</strong></p>
+<p>第 1 轮，它读一小段。<br>第 2 轮，它读”一小段 + 第 1 轮的全部内容”。<br>第 3 轮，它读”一小段 + 前两轮的全部内容”。<br>……</p>
+<p><strong>这就是”越转越贵”的来源。</strong></p>
+<blockquote>
+<p><strong>💡 这就像</strong>：每干一步，都要把前面所有的工作记录重新念一遍给你听。干到第十步的时候，光”念记录”就比干活本身费时间。</p>
+</blockquote>
+<h3 id="2-为什么-Agent-比聊天贵那么多"><a href="#2-为什么-Agent-比聊天贵那么多" class="headerlink" title="2. 为什么 Agent 比聊天贵那么多"></a>2. 为什么 Agent 比聊天贵那么多</h3><p>我们把两种用法摆在一起：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>普通聊天</th>
+<th>Agent 干活</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>你发多少字</td>
+<td>一次</td>
+<td>一次</td>
+</tr>
+<tr>
+<td>模型被调用几次</td>
+<td><strong>1 次</strong></td>
+<td><strong>可能几十次</strong></td>
+</tr>
+<tr>
+<td>每次要读多少内容</td>
+<td>你这段话</td>
+<td>你这段话 + 全部历史 + 全部回执</td>
+</tr>
+<tr>
+<td>输出多少</td>
+<td>一段回答</td>
+<td>每轮都要输出纸条、代码、说明</td>
+</tr>
+</tbody></table>
+<p><strong>同样一个问题，聊天是”一次买卖”，Agent 是”几十次买卖，而且每一次都比上一次更贵”。</strong></p>
+<p>所以你看到的现象就都能解释了：</p>
+<ul>
+<li>为什么 Agent 干一个活儿，账单比聊天高一个数量级</li>
+<li>为什么它干到一半会突然变慢（前面要读的东西太多了）</li>
+<li>为什么长任务干到后面，它会<strong>开始忘事</strong>——不是它笨，是<strong>前面塞的东西太多，把”白板”占满了</strong></li>
+</ul>
+<blockquote>
+<p><strong>小知识</strong>：上一篇讲过的”上下文窗口”，在这里就变成了一个很具体的问题——<strong>Agent 转的圈越多，那块”白板”就越挤。</strong> 挤满了，最早的内容就得被挤出去，它就开始”失忆”。</p>
+</blockquote>
+<h3 id="3-一张示意账单（不是精确数字，看结构就行）"><a href="#3-一张示意账单（不是精确数字，看结构就行）" class="headerlink" title="3. 一张示意账单（不是精确数字，看结构就行）"></a>3. 一张示意账单（不是精确数字，看结构就行）</h3><p>下面这张表，因为不同模型、不同工具差得太远。所以我们只需要看个大概，仅作参考即可：</p>
+<table>
+<thead>
+<tr>
+<th>每一轮烧钱的地方</th>
+<th>大致量级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>身份说明（每次都重读）</td>
+<td>一两千token，每轮都付</td>
+</tr>
+<tr>
+<td>历史记录（越滚越长）</td>
+<td>每轮都在涨</td>
+</tr>
+<tr>
+<td>你的需求</td>
+<td>可能几十token，很便宜</td>
+</tr>
+<tr>
+<td>回执（报错信息可能很长）</td>
+<td>从几十到几千token都有可能</td>
+</tr>
+<tr>
+<td>它吐出来的内容（<strong>输出更贵</strong>）</td>
+<td>通常比输入贵好几倍</td>
+</tr>
+</tbody></table>
+<p><strong>结论</strong>：一次完整的 Agent 任务，token 消耗常常是”同样问题问一次聊天 AI”的<strong>十倍以上</strong>——具体多少，取决于它转了多少圈。</p>
+<blockquote>
+<p><strong>重要提醒</strong>：你平时用的大部分 AI 产品（包括各种”AI 编程助手”），<strong>并不会把 token 账单摊给你看</strong>——它们要么包月，要么按”次数”扣额度。<strong>但后台算的，就是这笔账。</strong> 所以你才会看到”用着用着额度就没了”。</p>
+</blockquote>
+<h3 id="4-三个能立刻省钱的习惯"><a href="#4-三个能立刻省钱的习惯" class="headerlink" title="4. 三个能立刻省钱的习惯"></a>4. 三个能立刻省钱的习惯</h3><p>关于如何使用Agent才能更省钱，这边慧妈直接给你三条有用的建议：</p>
+<p><strong>第一条：把任务说小、说清楚。</strong></p>
+<p>对比一下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">❌ 帮我做个网站</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">✅ 做一个单页的倒计时网页，只有一个 index.html，</span><br><span class="line">   显示距离 2027 年 1 月 1 日还有多少天，</span><br><span class="line">   白底黑字，不要多余功能</span><br></pre></td></tr></table></figure>
+
+<p>第二种，它可能 3 轮就干完了。<br>第一种，它可能先问你三个问题，再猜你的意思，转十圈，最后做出来的还不是你要的。</p>
+<blockquote>
+<p><strong>你省下的每一圈，都是真金白银。</strong></p>
+</blockquote>
+<p><strong>第二条：让它先说计划，再动手。</strong></p>
+<p>这是一个反直觉但特别有用的技巧。</p>
+<p>在让它干活之前，先说一句：</p>
+<blockquote>
+<p>先别动手，把你打算怎么做，分几步告诉我。</p>
+</blockquote>
+<p>它吐一份计划，大约几百个 token，很便宜。你看一眼——<strong>如果方向错了，这时候叫停，你只损失了几百 token。</strong></p>
+<p>如果方向对了，你再让它干。<strong>这一步，能帮你省掉后面一大半白转的圈。</strong></p>
+<p><strong>第三条：简单的事，别用 Agent。</strong></p>
+<ul>
+<li>想查个概念、写段文案、翻译一段话 → <strong>聊天就够了</strong></li>
+<li>想改你电脑上的文件、想跑程序、想操作网页 → <strong>才需要 Agent</strong></li>
+</ul>
+<p><strong>用牛刀杀鸡，不是不行，是费钱。</strong></p>
+<details class="folding-tag" green><summary> 第四条：最省钱的一条 </summary>
+              <div class='content'>
+              <p>直接不使用AI就行了，不使用就不花钱，肯定省钱啊🤪</p>
+              </div>
+            </details>
+
+<h2 id="六、几个你一定会好奇的问题"><a href="#六、几个你一定会好奇的问题" class="headerlink" title="六、几个你一定会好奇的问题"></a>六、几个你一定会好奇的问题</h2><p><strong>问：Agent 不就是”自动点鼠标的脚本”吗？</strong></p>
+<p>答：<strong>不是。</strong></p>
+<p>脚本是”写死了的”：第一步点这里，第二步点那里，遇到意外就卡住。</p>
+<p>Agent 是”每一步现想”的：它看到报错，会<strong>换一种方法再试</strong>；看到页面变了，会<strong>重新判断该点哪儿</strong>。</p>
+<p><strong>脚本不会想，Agent 每一轮都在想。</strong></p>
+<p>（当然，代价就是——它比脚本慢，比脚本贵，而且<strong>有时候想歪</strong>。）</p>
+<p><strong>问：它会不会”假装”干完了？</strong></p>
+<p>答：<strong>会。而且这是它最讨厌的毛病之一。</strong></p>
+<p>因为大模型只是在”猜下一句最像样的话”。当它猜”任务完成了，我该说完成了”的时候，它可能<strong>根本不知道到底完成没有</strong>——它只是觉得这句话很合理。</p>
+<p>所以你会遇到：它说”已经帮你改好了”，你一看，文件根本没动（奇怪，怎么有点像你豆姐🤣）。</p>
+<blockquote>
+<p><strong>🤔 判断方法</strong>：别听它说，<strong>去看结果</strong>。</p>
+<p>文件真的变了吗？程序真的跑通了吗？网页真的打开了吗？</p>
+<p><strong>它的话是”转述”，不是”证据”。</strong></p>
+</blockquote>
+<p><strong>问：为什么它有时候会绕圈、死循环？</strong></p>
+<p>答：三个常见原因：</p>
+<ul>
+<li><strong>同一个报错反复出现</strong>，它每次都想”再试一次”，但没想到换个思路</li>
+<li><strong>它看不到自己的进度</strong>，以为自己还没开始</li>
+<li><strong>上下文挤满了</strong>，前面试过什么它已经忘了，于是又试一遍</li>
+</ul>
+<p>所以几乎所有 Agent 都有个隐藏设定：<strong>最多转多少圈就强制停下。</strong> 这个”上限”，就是防它转到天荒地老的。</p>
+<p><strong>问：它会不会把我文件删了？</strong></p>
+<p>答：<strong>有可能。</strong></p>
+<p>它有”写文件”这只手，那”删文件”、”覆盖文件”通常也在能力范围里。而且它<strong>不理解什么叫”重要”</strong>——在它眼里，一个文件和一个备份文件没有区别。</p>
+<p>所以第一次用 Agent，慧妈的建议很朴素：</p>
+<ul>
+<li><strong>先在没用的文件夹里试</strong></li>
+<li><strong>重要的东西，先备份</strong></li>
+<li><strong>别一上来就让它整理你的整个 D 盘</strong></li>
+</ul>
+<p><strong>问：它是不是真的”看见”网页了？</strong></p>
+<p>答：这个问题问得特别好。</p>
+<p>大多数情况下，<strong>它没”看见”</strong>，它读到的是网页被转成的<strong>文字</strong>。<br>少数会截图的 Agent，<strong>它”看见”的也是被切成一块块 token 的图片</strong>。</p>
+<p><strong>从头到尾，它都没有眼睛。它只有”递进来的文字”。</strong></p>
+<p><strong>问：我完全不懂代码，能用吗？</strong></p>
+<p>答：<strong>能，而且你比程序员更需要它。</strong></p>
+<p>但有一件事你得接受：<strong>你得能判断”它干得对不对”。</strong></p>
+<p>它做完一个网页，你要能打开看看长得对不对；它整理完照片，你要能翻一翻有没有放错。</p>
+<p><strong>你不需要会写，但你得会验收。</strong> 这句话，希望你记一辈子。</p>
+<p><strong>问：那我把活儿全交给它，不就完了？</strong></p>
+<p>答：<strong>先别。</strong></p>
+<p>它有手，但它不会替你想”这事儿该不该做”。</p>
+<p><strong>方向是你定的，验收是你做的，责任也是你的。</strong> 它只是个执行力特别强、但完全没有主见的帮手。</p>
+<h2 id="七、注意事项：第一次用-Agent，请守住这几条"><a href="#七、注意事项：第一次用-Agent，请守住这几条" class="headerlink" title="七、注意事项：第一次用 Agent，请守住这几条"></a>七、注意事项：第一次用 Agent，请守住这几条</h2><p>前面讲的都是”它怎么干活”，这一节讲”你怎么不出事”。</p>
+<p>因为<strong>有手的东西，和有脑子的东西，风险完全不一样。</strong></p>
+<h3 id="1-权限，能少给就少给"><a href="#1-权限，能少给就少给" class="headerlink" title="1. 权限，能少给就少给"></a>1. 权限，能少给就少给</h3><p>让它只能碰一个文件夹，就别给它整个硬盘。<br>能用”只读”的，就别给它”可写”。</p>
+<blockquote>
+<p><strong>💡 这就像</strong>：你请人来家里修水管，你会把整串钥匙给他吗？</p>
+</blockquote>
+<h3 id="2-密码、密钥，一个字都别给它"><a href="#2-密码、密钥，一个字都别给它" class="headerlink" title="2. 密码、密钥，一个字都别给它"></a>2. 密码、密钥，一个字都别给它</h3><p>它读到的每一个字，都会变成 token，<strong>都可能被发到服务器上</strong>。</p>
+<blockquote>
+<p><strong>记住一句话</strong>：<strong>凡是你不愿意贴在公网上的东西，都别贴进对话框。</strong></p>
+</blockquote>
+<h3 id="3-重要操作，让它先说再做"><a href="#3-重要操作，让它先说再做" class="headerlink" title="3. 重要操作，让它先说再做"></a>3. 重要操作，让它先说再做</h3><p>删文件、改系统设置、发邮件、下单、转账——<strong>这类事，先让它把”打算做什么”写出来给你看。</strong></p>
+<h3 id="4-一定要验收"><a href="#4-一定要验收" class="headerlink" title="4. 一定要验收"></a>4. 一定要验收</h3><p>它说”完成”，你去看结果。<br>它说”测试通过”，你自己点一下。</p>
+<p><strong>它是执行者，不是担保人。</strong></p>
+<h3 id="5-给它一个”止损线”"><a href="#5-给它一个”止损线”" class="headerlink" title="5. 给它一个”止损线”"></a>5. 给它一个”止损线”</h3><p>长任务开始前，先跟它说清楚：</p>
+<blockquote>
+<p>最多试 5 次，5 次还不行就停下来告诉我。</p>
+</blockquote>
+<p>不然它可能在一个小坑里，转到你的额度烧完。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>好了，以上便是本期教学的所有内容了。</p>
+<p>我们回到开头那三个问题。</p>
+<blockquote>
+<p><strong>刚才，是谁在打字？</strong></p>
+</blockquote>
+<p><strong>是 Agent 的程序。</strong> 它照着大模型吐出来的纸条，一个一个字符地敲进去。</p>
+<blockquote>
+<p><strong>是谁点的”运行”？</strong></p>
+</blockquote>
+<p><strong>还是 Agent。</strong> 大模型只说了”运行一下”，真正按下那个按钮的，是程序。</p>
+<blockquote>
+<p><strong>AI……有手吗？</strong></p>
+</blockquote>
+<p><strong>没有。</strong></p>
+<p>大模型没有手。它被关在玻璃盒子里，碰不到你的任何东西。<strong>它能做的，只有说。</strong></p>
+<p><strong>但它身边站着一个有手的东西。</strong> 那个东西叫 Agent。</p>
+<p>而它俩之间来回递的，不是眼神，不是手势，不是”感觉”——</p>
+<p><strong>是一张一张的纸条，一个一个的 token。</strong></p>
+<hr>
+<p>所以这篇文章，如果只能留一句话给你，慧妈希望是这句：</p>
+<blockquote>
+<p><strong>AI 没有手。它只是用 token，指挥了一双别人的手。</strong></p>
+</blockquote>
+<p>而想通这件事之后，很多原本莫名其妙的现象，就都对上了：</p>
+<ul>
+<li>为什么它必须一轮一轮来（<strong>因为不看到回执，它不知道下一步</strong>）</li>
+<li>为什么它看不见报错却知道改哪儿（<strong>因为报错被抄成文字递进去了</strong>）</li>
+<li>为什么它有时候会”假装”干完了（<strong>因为它只是在猜下一句最像样的话</strong>）</li>
+<li>为什么它干活比聊天贵那么多（<strong>因为每一轮都要把前面全部重读一遍</strong>）</li>
+<li>为什么它干到后面会忘事（<strong>因为上下文被塞满了</strong>）</li>
+</ul>
+<p><strong>你以为它在”看”你的电脑，其实它只是在”读”别人递给它的字。</strong></p>
+<blockquote>
+<p><strong>本文数据说明</strong></p>
+<p>文中的轮数、步骤、纸条内容，都是按”新年倒计时网页”这个例子做的<strong>示意</strong>，目的是让你看清结构，不是某一次真实运行的日志。</p>
+<p>关于Token账单的介绍数据，<strong>仅作参考，并非真实数据</strong>——因为不同模型、不同工具、不同任务差别极大，写死了反而会误导你。你要记住的是<strong>概念</strong>：每轮重读历史、输出比输入贵、越转越贵。</p>
+<p>各家 AI 产品的计费方式（包月 &#x2F; 按次 &#x2F; 按 token）随时会变，<strong>具体以官网当期说明为准</strong>。</p>
+</blockquote>
+<p>最后，不要忘了<strong>关注</strong>慧妈，<strong>收藏</strong>此博客，我会在这上面更新更多教学内容。你们的<strong>关注</strong>与<strong>打赏</strong>是慧妈更新的<strong>最大动力</strong>😊</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAMEanmY3uehvi1ZgUrLoj1jn-mfwtAAAssQaxt44dFXY2WbqFjz2RsBAAMCAAN4AAM9BA" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAMEanmY3uehvi1ZgUrLoj1jn-mfwtAAAssQaxt44dFXY2WbqFjz2RsBAAMCAAN4AAM9BA" title="头像" alt="头像"></a><div class="post-copyright__author_name">Hui</div><div class="post-copyright__author_desc"></div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/%E6%96%87%E7%AB%A0/Agent%E6%98%AF%E6%80%8E%E4%B9%88%E9%80%9A%E8%BF%87Token%E5%B8%AE%E4%BD%A0%E5%B9%B2%E6%B4%BB%E7%9A%84%EF%BC%9F/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/%E6%96%87%E7%AB%A0/Agent%E6%98%AF%E6%80%8E%E4%B9%88%E9%80%9A%E8%BF%87Token%E5%B8%AE%E4%BD%A0%E5%B9%B2%E6%B4%BB%E7%9A%84%EF%BC%9F/')">Agent是怎么通过Token帮你干活的？</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="wxp://f2f0yeq-ExvuLkEbG6h9Rq68lujfb2RdKWRr4X-ovaWbptY" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAMFanmglhLB83v2pQ4MoY_7uWv6t2YAAugQaxt44dFXu7N8Zz5ZXn0BAAMCAANtAAM9BA" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://qr.alipay.com/fkx15080bn99l0v2cxegf05" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAMGanmhQdoAAZ2UFX5QUSKTJ3uUYLdmAALqEGsbeOHRV6_bS35pDm1yAQADAgADeAADPQQ" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/%E6%96%87%E7%AB%A0/Agent%E6%98%AF%E6%80%8E%E4%B9%88%E9%80%9A%E8%BF%87Token%E5%B8%AE%E4%BD%A0%E5%B9%B2%E6%B4%BB%E7%9A%84%EF%BC%9F/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=Agent是怎么通过Token帮你干活的？&amp;url=http://example.com/%E6%96%87%E7%AB%A0/Agent%E6%98%AF%E6%80%8E%E4%B9%88%E9%80%9A%E8%BF%87Token%E5%B8%AE%E4%BD%A0%E5%B9%B2%E6%B4%BB%E7%9A%84%EF%BC%9F/&amp;pic=https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOIatYyET_qVoMb-Q0xXBRyIAyfdI0AAgcTaxtZLLFWCA-Phd4hwvcBAAMCAAN4AAM9BA" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">慧妈的博客</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E6%95%99%E5%AD%A6/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>教学<span class="tagsPageCount">9</span></a><a class="post-meta__box__tags" href="/tags/AI/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>AI<span class="tagsPageCount">2</span></a><a class="post-meta__box__tags" href="/tags/%E5%B0%8F%E7%99%BD%E5%BF%85%E7%9C%8B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>小白必看<span class="tagsPageCount">7</span></a><a class="post-meta__box__tags" href="/tags/%E5%B9%B2%E8%B4%A7%E6%BB%A1%E6%BB%A1/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>干货满满<span class="tagsPageCount">7</span></a><a class="post-meta__box__tags" href="/tags/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>持续更新<span class="tagsPageCount">9</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOGas9yRsClcTms5RlmTI6ctu_rszAAAt4Taxu3O3hWL_6Mjm7sifYBAAMCAAN5AAM9BA" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/%E6%96%87%E7%AB%A0/%E4%BB%80%E4%B9%88%E6%98%AFToken%EF%BC%9FAI%E7%9C%BC%E9%87%8C%E7%9A%84%E6%96%87%E5%AD%97%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF%E5%AD%97%EF%BC%9F/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOGas9yRsClcTms5RlmTI6ctu_rszAAAt4Taxu3O3hWL_6Mjm7sifYBAAMCAAN5AAM9BA" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">什么是Token？AI眼里的文字，为什么不是字？</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/%E6%96%87%E7%AB%A0/%E4%BB%80%E4%B9%88%E6%98%AFToken%EF%BC%9FAI%E7%9C%BC%E9%87%8C%E7%9A%84%E6%96%87%E5%AD%97%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF%E5%AD%97%EF%BC%9F/" title="什么是Token？AI眼里的文字，为什么不是字？"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOGas9yRsClcTms5RlmTI6ctu_rszAAAt4Taxu3O3hWL_6Mjm7sifYBAAMCAAN5AAM9BA" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-10-14</div><div class="title">什么是Token？AI眼里的文字，为什么不是字？</div></div></a></div><div><a href="/%E6%96%87%E7%AB%A0/%E4%BB%80%E4%B9%88%E6%98%AFIPv4%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AFIPv6%EF%BC%9F/" title="什么是IPv4，什么是IPv6？"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOFar1G89y4wr99UPznyqMprLe_f-AAAo0UaxsBAuhVZgSxTUjuSZUBAAMCAAN4AAM9BA" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-10-01</div><div class="title">什么是IPv4，什么是IPv6？</div></div></a></div><div><a href="/%E6%96%87%E7%AB%A0/%E6%96%B0%E4%B9%B0%E7%9A%841TB%E5%9B%BA%E6%80%81%EF%BC%8C%E8%A3%85%E7%94%B5%E8%84%91%E4%B8%8A%E6%98%BE%E7%A4%BA%E5%8F%AA%E6%9C%89900%E5%A4%9AGB%EF%BC%8C%E6%98%AF%E5%95%86%E5%AE%B6%E5%9C%A8%E5%9D%91%E6%88%91%E5%90%97%EF%BC%9F/" title="新买的1TB固态，装电脑上显示只有900多GB，是商家在坑我吗？"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOEaqlqLSC7GXsP8k_cuCH3-NzKq8EAAqoVaxuVwUlVCTnbu5IjJD8BAAMCAAN5AAM9BA" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-09-15</div><div class="title">新买的1TB固态，装电脑上显示只有900多GB，是商家在坑我吗？</div></div></a></div><div><a href="/%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E4%BB%8E%E7%94%B5%E8%84%91%E4%B8%8A%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6/" title="如何从电脑上卸载软件"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAODapbrSo8G70lB2JpyVaGCOTPdkAoAAgMTaxty6rlUbR8xR-rWWwEBAAMCAAN5AAM9BA" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-09-01</div><div class="title">如何从电脑上卸载软件</div></div></a></div><div><a href="/%E6%96%87%E7%AB%A0/%E7%94%B5%E8%84%91%E4%B8%BB%E6%9C%BA%E9%87%8C%E9%83%BD%E8%A3%85%E4%BA%86%E4%BA%9B%E4%BB%80%E4%B9%88%EF%BC%9F%E6%AF%8F%E6%A0%B7%E4%B8%9C%E8%A5%BF%E9%83%BD%E6%98%AF%E7%94%A8%E6%9D%A5%E5%B9%B2%E4%BB%80%E4%B9%88%E7%9A%84%EF%BC%9F/" title="电脑主机里都装了些什么？每样东西都是用来干什么的？"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANKaonKXaXeFye7mHPJBHs5IZvp0RIAAowSaxtsjFFUPiVmEox3QQQBAAMCAAN5AAM9BA" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-08-23</div><div class="title">电脑主机里都装了些什么？每样东西都是用来干什么的？</div></div></a></div><div><a href="/%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E5%AE%89%E8%A3%85%E5%8D%A1%E5%B7%B4%E6%96%AF%E5%9F%BA%E6%9D%80%E6%AF%92%E8%BD%AF%E4%BB%B6/" title="如何在电脑上安装卡巴斯基杀毒软件"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AANeapAaxhpu2hdA1cEo3quacMTs4MEAAjsUaxudzIBUlyOQXnwb7a4BAAMCAAN3AAM9BA" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-08-27</div><div class="title">如何在电脑上安装卡巴斯基杀毒软件</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAMEanmY3uehvi1ZgUrLoj1jn-mfwtAAAssQaxt44dFXY2WbqFjz2RsBAAMCAAN4AAM9BA" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description"><div style="line-height:1.6;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">一个对<b style="color:#fff">啥都感兴趣</b>的<b style="color:#fff">电脑爱好者</b>，本博客用于分享<b style="color:#fff">产品、设计</b>以及我学到的<b style="color:#fff">电脑知识</b>，还会分享一些<b style="color:#fff">个人日常</b>。</div><div style="line-height:1.6;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">希望你能在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>(´▽｀)</div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来看我的博客鸭~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%A4%B4"><span class="toc-text">开头</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E8%AF%B4%E6%B8%85%E6%A5%9A%EF%BC%9A%E8%BF%99%E7%AF%87%E4%BD%A0%E4%BC%9A%E5%BE%97%E5%88%B0%E4%BB%80%E4%B9%88"><span class="toc-text">先说清楚：这篇你会得到什么</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9F%A5%E8%AF%86%E7%A7%91%E6%99%AE"><span class="toc-text">知识科普</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%85%88%E6%8A%8A%E2%80%9DAI%E2%80%9D%E8%BF%99%E4%B8%AA%E5%AD%97%E6%8B%86%E6%88%90%E4%B8%A4%E5%8D%8A%EF%BC%9A%E4%B8%80%E4%B8%AA%E8%84%91%E5%AD%90%EF%BC%8C%E4%B8%80%E5%8F%8C%E6%89%8B"><span class="toc-text">一、先把”AI”这个字拆成两半：一个脑子，一双手</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%84%91%E5%AD%90%EF%BC%9A%E9%82%A3%E4%B8%AA%E5%8F%AA%E4%BC%9A%E8%AF%B4%E8%AF%9D%E7%9A%84%E5%A4%A7%E6%A8%A1%E5%9E%8B"><span class="toc-text">1. 脑子：那个只会说话的大模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%8E%BB%E7%92%83%E7%9B%92%E5%AD%90%EF%BC%9A%E5%AE%83%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%87%8C%EF%BC%8C%E7%A2%B0%E4%B8%8D%E5%88%B0%E4%BD%A0%E6%A1%8C%E4%B8%8A%E7%9A%84%E4%BB%BB%E4%BD%95%E4%B8%9C%E8%A5%BF"><span class="toc-text">2. 玻璃盒子：它在服务器里，碰不到你桌上的任何东西</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%89%80%E4%BB%A5%EF%BC%8C%E5%8F%AA%E6%9C%89%E8%84%91%E5%AD%90%E7%9A%84-AI%EF%BC%8C%E5%8F%AA%E8%83%BD%E2%80%9D%E6%95%99%E2%80%9D%E4%BD%A0"><span class="toc-text">3. 所以，只有脑子的 AI，只能”教”你</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81Agent-%E4%B8%8D%E6%98%AF%E2%80%9D%E6%9B%B4%E8%81%AA%E6%98%8E%E7%9A%84-AI%E2%80%9D%EF%BC%8C%E8%80%8C%E6%98%AF%E2%80%9D%E7%BB%99%E8%84%91%E5%AD%90%E9%85%8D%E4%BA%86%E4%B8%80%E5%8F%8C%E6%89%8B%E2%80%9D"><span class="toc-text">二、Agent 不是”更聪明的 AI”，而是”给脑子配了一双手”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E2%80%9C%E6%89%8B%E2%80%9D%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%E4%B8%9C%E8%A5%BF"><span class="toc-text">1. “手”到底是什么东西</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%82%A3%E5%AE%83%E4%BB%AC%E6%98%AF%E6%80%8E%E4%B9%88%E9%85%8D%E5%90%88%E7%9A%84%EF%BC%9F"><span class="toc-text">2. 那它们是怎么配合的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%85%B3%E9%94%AE%EF%BC%9A%E5%AE%83%E4%B8%8D%E4%BC%9A%E8%87%AA%E5%B7%B1%E6%8B%BF%E4%B8%BB%E6%84%8F"><span class="toc-text">3. 关键：它不会自己拿主意</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%89%80%E4%BB%A5%EF%BC%8C%E5%AE%83%E4%BF%A9%E5%BF%85%E9%A1%BB%E7%BB%84%E9%98%9F"><span class="toc-text">4. 所以，它俩必须组队</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9D%9E%E5%BE%97%E4%B8%80%E6%AD%A5%E6%AD%A5%E5%BE%AA%E7%8E%AF%E7%9D%80%E6%9D%A5%EF%BC%9F%E7%9B%B4%E6%8E%A5%E4%B8%80%E6%AD%A5%E5%88%B0%E4%BD%8D%E4%B8%8D%E8%A1%8C%E5%90%97%EF%BC%9F"><span class="toc-text">三、为什么非得一步步循环着来？直接一步到位不行吗？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%83%E4%B8%80%E6%AC%A1%E5%8F%AA%E8%83%BD%E8%AF%B4%E2%80%9D%E4%B8%80%E5%B0%8F%E6%AE%B5%E2%80%9D"><span class="toc-text">1. 它一次只能说”一小段”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%83%E4%B8%8D%E7%9F%A5%E9%81%93%E7%BB%93%E6%9E%9C%EF%BC%8C%E5%B0%B1%E6%B2%A1%E6%B3%95%E5%86%B3%E5%AE%9A%E4%B8%8B%E4%B8%80%E6%AD%A5"><span class="toc-text">2. 它不知道结果，就没法决定下一步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%B4%BB%E5%84%BF%E8%B6%8A%E9%95%BF%EF%BC%8C%E8%B6%8A%E5%AE%B9%E6%98%93%E2%80%9D%E8%B7%91%E5%81%8F%E2%80%9D"><span class="toc-text">3. 活儿越长，越容易”跑偏”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%89%80%E4%BB%A5%EF%BC%8C%E2%80%9D%E4%BC%9A%E6%8B%86%E6%AD%A5%E9%AA%A4%E2%80%9D%E6%AF%94%E2%80%9D%E8%81%AA%E6%98%8E%E2%80%9D%E6%9B%B4%E9%87%8D%E8%A6%81"><span class="toc-text">4. 所以，”会拆步骤”比”聪明”更重要</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%90%8C%E4%B8%80%E4%B8%AA%E5%9C%88%EF%BC%8C%E8%83%BD%E5%B9%B2%E7%9A%84%E4%BA%8B%E8%BF%9C%E4%B8%8D%E6%AD%A2%E5%86%99%E4%BB%A3%E7%A0%81"><span class="toc-text">四、同一个圈，能干的事远不止写代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E9%82%A3-token-%E5%88%B0%E5%BA%95%E8%8A%B1%E5%9C%A8%E5%93%AA%E5%84%BF%E4%BA%86%EF%BC%9F"><span class="toc-text">五、那 token 到底花在哪儿了？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%AF%8F%E4%B8%80%E8%BD%AE%EF%BC%8C%E5%AE%83%E9%83%BD%E8%A6%81%E2%80%9D%E9%87%8D%E8%AF%BB%E4%B8%80%E9%81%8D%E2%80%9D"><span class="toc-text">1. 每一轮，它都要”重读一遍”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%BA%E4%BB%80%E4%B9%88-Agent-%E6%AF%94%E8%81%8A%E5%A4%A9%E8%B4%B5%E9%82%A3%E4%B9%88%E5%A4%9A"><span class="toc-text">2. 为什么 Agent 比聊天贵那么多</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%80%E5%BC%A0%E7%A4%BA%E6%84%8F%E8%B4%A6%E5%8D%95%EF%BC%88%E4%B8%8D%E6%98%AF%E7%B2%BE%E7%A1%AE%E6%95%B0%E5%AD%97%EF%BC%8C%E7%9C%8B%E7%BB%93%E6%9E%84%E5%B0%B1%E8%A1%8C%EF%BC%89"><span class="toc-text">3. 一张示意账单（不是精确数字，看结构就行）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%B8%89%E4%B8%AA%E8%83%BD%E7%AB%8B%E5%88%BB%E7%9C%81%E9%92%B1%E7%9A%84%E4%B9%A0%E6%83%AF"><span class="toc-text">4. 三个能立刻省钱的习惯</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%87%A0%E4%B8%AA%E4%BD%A0%E4%B8%80%E5%AE%9A%E4%BC%9A%E5%A5%BD%E5%A5%87%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">六、几个你一定会好奇的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%EF%BC%9A%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%94%A8-Agent%EF%BC%8C%E8%AF%B7%E5%AE%88%E4%BD%8F%E8%BF%99%E5%87%A0%E6%9D%A1"><span class="toc-text">七、注意事项：第一次用 Agent，请守住这几条</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9D%83%E9%99%90%EF%BC%8C%E8%83%BD%E5%B0%91%E7%BB%99%E5%B0%B1%E5%B0%91%E7%BB%99"><span class="toc-text">1. 权限，能少给就少给</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AF%86%E7%A0%81%E3%80%81%E5%AF%86%E9%92%A5%EF%BC%8C%E4%B8%80%E4%B8%AA%E5%AD%97%E9%83%BD%E5%88%AB%E7%BB%99%E5%AE%83"><span class="toc-text">2. 密码、密钥，一个字都别给它</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%87%8D%E8%A6%81%E6%93%8D%E4%BD%9C%EF%BC%8C%E8%AE%A9%E5%AE%83%E5%85%88%E8%AF%B4%E5%86%8D%E5%81%9A"><span class="toc-text">3. 重要操作，让它先说再做</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%B8%80%E5%AE%9A%E8%A6%81%E9%AA%8C%E6%94%B6"><span class="toc-text">4. 一定要验收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%BB%99%E5%AE%83%E4%B8%80%E4%B8%AA%E2%80%9D%E6%AD%A2%E6%8D%9F%E7%BA%BF%E2%80%9D"><span class="toc-text">5. 给它一个”止损线”</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/%E6%96%87%E7%AB%A0/Agent%E6%98%AF%E6%80%8E%E4%B9%88%E9%80%9A%E8%BF%87Token%E5%B8%AE%E4%BD%A0%E5%B9%B2%E6%B4%BB%E7%9A%84%EF%BC%9F/" title="Agent是怎么通过Token帮你干活的？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOIatYyET_qVoMb-Q0xXBRyIAyfdI0AAgcTaxtZLLFWCA-Phd4hwvcBAAMCAAN4AAM9BA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Agent是怎么通过Token帮你干活的？"/></a><div class="content"><a class="title" href="/%E6%96%87%E7%AB%A0/Agent%E6%98%AF%E6%80%8E%E4%B9%88%E9%80%9A%E8%BF%87Token%E5%B8%AE%E4%BD%A0%E5%B9%B2%E6%B4%BB%E7%9A%84%EF%BC%9F/" title="Agent是怎么通过Token帮你干活的？">Agent是怎么通过Token帮你干活的？</a><time datetime="2026-10-19T15:08:21.000Z" title="发表于 2026-10-19 23:08:21">2026-10-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%96%87%E7%AB%A0/%E4%BB%80%E4%B9%88%E6%98%AFToken%EF%BC%9FAI%E7%9C%BC%E9%87%8C%E7%9A%84%E6%96%87%E5%AD%97%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF%E5%AD%97%EF%BC%9F/" title="什么是Token？AI眼里的文字，为什么不是字？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOGas9yRsClcTms5RlmTI6ctu_rszAAAt4Taxu3O3hWL_6Mjm7sifYBAAMCAAN5AAM9BA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="什么是Token？AI眼里的文字，为什么不是字？"/></a><div class="content"><a class="title" href="/%E6%96%87%E7%AB%A0/%E4%BB%80%E4%B9%88%E6%98%AFToken%EF%BC%9FAI%E7%9C%BC%E9%87%8C%E7%9A%84%E6%96%87%E5%AD%97%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF%E5%AD%97%EF%BC%9F/" title="什么是Token？AI眼里的文字，为什么不是字？">什么是Token？AI眼里的文字，为什么不是字？</a><time datetime="2026-10-14T12:17:00.000Z" title="发表于 2026-10-14 20:17:00">2026-10-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%96%87%E7%AB%A0/%E4%BB%80%E4%B9%88%E6%98%AFIPv4%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AFIPv6%EF%BC%9F/" title="什么是IPv4，什么是IPv6？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOFar1G89y4wr99UPznyqMprLe_f-AAAo0UaxsBAuhVZgSxTUjuSZUBAAMCAAN4AAM9BA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="什么是IPv4，什么是IPv6？"/></a><div class="content"><a class="title" href="/%E6%96%87%E7%AB%A0/%E4%BB%80%E4%B9%88%E6%98%AFIPv4%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AFIPv6%EF%BC%9F/" title="什么是IPv4，什么是IPv6？">什么是IPv4，什么是IPv6？</a><time datetime="2026-09-30T17:30:48.000Z" title="发表于 2026-10-01 01:30:48">2026-10-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%96%87%E7%AB%A0/%E6%96%B0%E4%B9%B0%E7%9A%841TB%E5%9B%BA%E6%80%81%EF%BC%8C%E8%A3%85%E7%94%B5%E8%84%91%E4%B8%8A%E6%98%BE%E7%A4%BA%E5%8F%AA%E6%9C%89900%E5%A4%9AGB%EF%BC%8C%E6%98%AF%E5%95%86%E5%AE%B6%E5%9C%A8%E5%9D%91%E6%88%91%E5%90%97%EF%BC%9F/" title="新买的1TB固态，装电脑上显示只有900多GB，是商家在坑我吗？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAOEaqlqLSC7GXsP8k_cuCH3-NzKq8EAAqoVaxuVwUlVCTnbu5IjJD8BAAMCAAN5AAM9BA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新买的1TB固态，装电脑上显示只有900多GB，是商家在坑我吗？"/></a><div class="content"><a class="title" href="/%E6%96%87%E7%AB%A0/%E6%96%B0%E4%B9%B0%E7%9A%841TB%E5%9B%BA%E6%80%81%EF%BC%8C%E8%A3%85%E7%94%B5%E8%84%91%E4%B8%8A%E6%98%BE%E7%A4%BA%E5%8F%AA%E6%9C%89900%E5%A4%9AGB%EF%BC%8C%E6%98%AF%E5%95%86%E5%AE%B6%E5%9C%A8%E5%9D%91%E6%88%91%E5%90%97%EF%BC%9F/" title="新买的1TB固态，装电脑上显示只有900多GB，是商家在坑我吗？">新买的1TB固态，装电脑上显示只有900多GB，是商家在坑我吗？</a><time datetime="2026-09-15T15:54:45.000Z" title="发表于 2026-09-15 23:54:45">2026-09-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E4%BB%8E%E7%94%B5%E8%84%91%E4%B8%8A%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6/" title="如何从电脑上卸载软件"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAODapbrSo8G70lB2JpyVaGCOTPdkAoAAgMTaxty6rlUbR8xR-rWWwEBAAMCAAN5AAM9BA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何从电脑上卸载软件"/></a><div class="content"><a class="title" href="/%E6%96%87%E7%AB%A0/%E5%A6%82%E4%BD%95%E4%BB%8E%E7%94%B5%E8%84%91%E4%B8%8A%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6/" title="如何从电脑上卸载软件">如何从电脑上卸载软件</a><time datetime="2026-09-01T15:12:33.000Z" title="发表于 2026-09-01 23:12:33">2026-09-01</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://www.facebook.com/share/1EWtdFy4nw/" title="facebook"><i class="anzhiyufont anzhiyu-icon-facebook1"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://t.me/huixing63" title="Telegram"><i class="anzhiyufont anzhiyu-icon-paper-plane"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://x.com/LiuHui82115" title="X"><i class="anzhiyufont anzhiyu-icon-xmark"></i></a><img class="footer_mini_logo" title="返回顶部" alt="返回顶部" onclick="anzhiyu.scrollToDest(0, 500)" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.huimanb.top/api/cfile/AgACAgUAAyEGAATmwPQ1AAMEanmY3uehvi1ZgUrLoj1jn-mfwtAAAssQaxt44dFXY2WbqFjz2RsBAAMCAAN4AAM9BA" size="50px"/><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/Hui40" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/1472228365" title="Bilibili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a><a class="deal_link" target="_blank" rel="noopener" href="https://v.douyin.com/IExbL_qBJnQ/" title="抖音"><i class="anzhiyufont anzhiyu-icon-tiktok"></i></a></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2026 By <a class="footer-bar-link" href="/" title="Hui" target="_blank">Hui</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = ["生活明朗&#44; 万物可爱&#44; 人间值得&#44; 未来可期."]
+        sub.unshift(data.hitokoto, from)
+        window.typed = new Typed('#footer-type-tips', {
+          strings: sub,
+          startDelay: 300,
+          typeSpeed: 150,
+          loop: true,
+          backSpeed: 50,
+        })
+      } else {
+        document.getElementById('footer-type-tips').innerHTML = data.hitokoto
+      }
+    })
+}
+
+if (true) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}
+</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">3</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://hexo.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 全部文章</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://lennax.top/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> Lennax的博客</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 0.88rem;">AI<sup>2</sup></a><a href="/tags/%E5%AE%89%E5%85%A8%E4%B8%8A%E7%BD%91/" style="font-size: 0.88rem;">安全上网<sup>3</sup></a><a href="/tags/%E5%B0%8F%E7%99%BD%E5%BF%85%E7%9C%8B/" style="font-size: 0.88rem;">小白必看<sup>7</sup></a><a href="/tags/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">常用工具<sup>2</sup></a><a href="/tags/%E5%B9%B2%E8%B4%A7%E6%BB%A1%E6%BB%A1/" style="font-size: 0.88rem;">干货满满<sup>7</sup></a><a href="/tags/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" style="font-size: 0.88rem;">持续更新<sup>9</sup></a><a href="/tags/%E6%95%99%E5%AD%A6/" style="font-size: 0.88rem;">教学<sup>9</sup></a><a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 0.88rem;">日常<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/" style="font-size: 0.88rem;">网络知识<sup>1</sup></a><a href="/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" style="font-size: 0.88rem;">自我介绍<sup>1</sup></a><a href="/tags/%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87/" style="font-size: 0.88rem;">装机必备<sup>3</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD/" style="font-size: 0.88rem;">软件下载<sup>3</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("08/10/2026 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2026 By 安知鱼 V1.7.1",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 Hui 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(()=>{
+  const getGiscusTheme = theme => {
+    return theme === 'dark' ? 'dark' : 'light'
+  }
+
+  const loadGiscus = () => {
+    const config = Object.assign({
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'Hui40/Hui40.github.io',
+      'data-repo-id': 'R_kgDOTzdNKw',
+      'data-category-id': 'DIC_kwDOTzdNK84DDobc',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true
+    },{"data-lang":"zh-CN","data-mapping":"pathname","data-category":"General","data-input-position":"top"})
+
+    const ele = document.createElement('script')
+    for (let key in config) {
+      ele.setAttribute(key, config[key])
+    }
+    document.getElementById('giscus-wrap').appendChild(ele)
+  }
+
+  const changeGiscusTheme = theme => {
+    const sendMessage = message => {
+      const iframe = document.querySelector('iframe.giscus-frame')
+      if (!iframe) return
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app')
+    }
+
+    sendMessage({
+      setConfig: {
+        theme: getGiscusTheme(theme)
+      }
+    });
+  }
+
+  anzhiyu.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if ('Giscus' === 'Giscus' || !true) {
+    if (true) anzhiyu.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment = loadGiscus
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
