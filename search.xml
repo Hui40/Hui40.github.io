@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>AI时代，什么是API key？</title>
+      <link href="/%E6%96%87%E7%AB%A0/AI%E6%97%B6%E4%BB%A3%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AFAPI%20key%EF%BC%9F/"/>
+      <url>/%E6%96%87%E7%AB%A0/AI%E6%97%B6%E4%BB%A3%EF%BC%8C%E4%BB%80%E4%B9%88%E6%98%AFAPI%20key%EF%BC%9F/</url>
+      
+        <content type="html"><![CDATA[<div class="video-container"><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=117593117561329&bvid=BV1jqWV6ZEej&cid=43496704896&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div><style>.video-container {    position: relative;    width: 100%;    padding-top: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 * 100%) */}.video-container iframe {    position: absolute;    top: 0;    left: 0;    width: 100%;    height: 100%;}</style><h1 id="开头"><a href="#开头" class="headerlink" title="开头"></a>开头</h1><p>上周，一个朋友给我发来三行字：</p><blockquote><p>我装了个 AI 软件<br>它让我填两个框<br>我填了，一直报错</p></blockquote><p>我让他截个图。是这么两个输入框：</p><p><strong>设置 · 模型服务</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">┌────────────────────────────────────────────┐</span><br><span class="line">│                                            │</span><br><span class="line">│  base URL                                  │</span><br><span class="line">│  ┌──────────────────────────────────────┐  │</span><br><span class="line">│  │                                      │  │</span><br><span class="line">│  └──────────────────────────────────────┘  │</span><br><span class="line">│                                            │</span><br><span class="line">│  API Key                                   │</span><br><span class="line">│  ┌──────────────────────────────────────┐  │</span><br><span class="line">│  │                                      │  │</span><br><span class="line">│  └──────────────────────────────────────┘  │</span><br><span class="line">│                                            │</span><br><span class="line">└────────────────────────────────────────────┘</span><br></pre></td></tr></table></figure><p>他补了一句，我印象特别深：</p><p><strong>“这两个框，我盯着看了半个钟头。”</strong></p><p>base URL？API key？</p><p>每个字母我都认识，拼在一起像外星话。上网一搜，能搜到的解释是这样的：</p><p><strong>“API Key 是用于身份验证的凭证，Base URL 是接口的基础路径。”</strong></p><p>好，这回连每个字都认识了，还是不懂。</p><p>所以我打算换个讲法。<strong>不说“凭证”，不提“接口”，也不用“鉴权”这种词。</strong> 就当你是我那个朋友，坐下，我们一个一个填。</p><p>看完这篇你会明白三件事：</p><ul><li>这两个框里，到底装的是什么</li><li>为什么它们<strong>必须凑在一起</strong>才能用</li><li>填错、填漏、填给别人看，分别会出什么事</li></ul><p>（放心，这篇不长。慧妈写它，就是为了让那个盯着两个框看半小时的人，少盯一会儿。）</p><h1 id="知识科普"><a href="#知识科普" class="headerlink" title="知识科普"></a>知识科普</h1><h2 id="一、说白了，就两样东西"><a href="#一、说白了，就两样东西" class="headerlink" title="一、说白了，就两样东西"></a>一、说白了，就两样东西</h2><h3 id="1-一把钥匙，一块门牌"><a href="#1-一把钥匙，一块门牌" class="headerlink" title="1. 一把钥匙，一块门牌"></a>1. 一把钥匙，一块门牌</h3><p>如果非要给这两个框各配一个实物，我会这么配：</p><blockquote><p><strong>API key，是那把钥匙。</strong><br><strong>base URL，是那块门牌号。</strong></p></blockquote><p>就这么简单。</p><table><thead><tr><th></th><th>对应什么</th><th>管什么</th></tr></thead><tbody><tr><td><strong>API key</strong></td><td>钥匙</td><td>让不让你进</td></tr><tr><td><strong>base URL</strong></td><td>门牌号</td><td>你去敲哪扇门</td></tr></tbody></table><p>一个决定<strong>让不让你进</strong>，一个决定<strong>你去哪儿敲</strong>。</p><p>缺一个都不行：只有钥匙没门牌，你站在大街上掏钥匙；只有门牌没钥匙，你找到了门，进不去。</p><h3 id="2-那为什么非要分成两个框？"><a href="#2-那为什么非要分成两个框？" class="headerlink" title="2. 那为什么非要分成两个框？"></a>2. 那为什么非要分成两个框？</h3><p>这是很多人没想通、但一想就通的地方。</p><p>因为<strong>这两样东西，一个是公开的，一个是私密的。</strong></p><ul><li><strong>门牌号是公开的。</strong> 所有 AI 厂商的地址，都明明白白写在他们自己的官方文档里，谁都能看、谁都能抄。</li><li><strong>钥匙是私密的。</strong> 那串东西只有你有，一旦别人拿到，花的钱算你的。</li></ul><p>所以软件把它们分成两个框——<strong>一个可以抄，一个只能你自己去领。</strong></p><p>还有一个更实在的原因：</p><blockquote><p><strong>换模型，只换上面的框；换账号，只换下面的框。</strong></p></blockquote><p>从 A 家换到 B 家，改一行地址就行，钥匙不动；换一个号，改一行钥匙就行，地址不动。</p><p><strong>分开，是为了让你换东西的时候不用连锅端。</strong></p><h2 id="二、门牌号：base-URL-到底在写什么"><a href="#二、门牌号：base-URL-到底在写什么" class="headerlink" title="二、门牌号：base URL 到底在写什么"></a>二、门牌号：base URL 到底在写什么</h2><h3 id="1-API-是什么？是人家在墙上给你开的一扇窗"><a href="#1-API-是什么？是人家在墙上给你开的一扇窗" class="headerlink" title="1. API 是什么？是人家在墙上给你开的一扇窗"></a>1. API 是什么？是人家在墙上给你开的一扇窗</h3><p>API 这个词的全称，你不需要记。你只需要知道它长什么样：</p><blockquote><p><strong>它是人家在墙上给你开的一扇窗。</strong></p></blockquote><p>你把问题从窗口递进去，对面替你把活干了，再把结果从窗口递出来。</p><p>你进不去那栋楼。你看不见里面有几台机器、几个工程师。你也翻不了人家的抽屉。</p><p><strong>这就是它为什么叫“窗”，不叫“门”。</strong> 门是让你进去的，窗只是让你递东西的。</p><p><strong>这也就解释了另一件事：API 不是“更厉害的网页”。</strong> 网页是给人看的，API 是给程序看的。同一个模型，网页版给你一个聊天框，API 给你的是一扇只认格式的窗——你递进去的东西格式不对，它原封不动退回来。</p><h3 id="2-这扇窗的地址，长这样"><a href="#2-这扇窗的地址，长这样" class="headerlink" title="2. 这扇窗的地址，长这样"></a>2. 这扇窗的地址，长这样</h3><p>好，看门牌。</p><p>AI 的收货地址，一般长这样：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.example.com/v1/chat/completions</span><br></pre></td></tr></table></figure><p>第一次看到这串东西，人的本能是“这什么玩意儿”。但按斜杠切开，就是四截：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">https://   api.example.com   /v1    /chat/completions</span><br><span class="line">   │             │            │            │</span><br><span class="line">怎么联系      哪家公司       第几层      找哪个柜台</span><br></pre></td></tr></table></figure><p>一截一截看：</p><p><strong>第一截 <code>https://</code> —— 用什么方式联系。</strong></p><p><code>https</code> 就是“加密送信”，路上有人拆开看，看到的也是乱码。少了那个 <code>s</code>（写成 <code>http://</code>），很多家会直接拒你，或者给你一个“连接不安全”的红叉。</p><p><strong>第二截 <code>api.example.com</code> —— 哪家公司。</strong></p><p>这是整串里唯一“换一家就变一次”的部分。注意前面那个 <code>api</code>：它通常表示“这栋楼的 API 入口”，不是你平时用浏览器点开的那个官网。<strong>一个公司往往有好几个门，别走错。</strong></p><p><strong>第三截 <code>/v1</code> —— 第几层。</strong></p><p><code>v1</code> 就是第一版。有些家没有这一截，有些家是 <code>/v2</code>、<code>/v4</code>。写错楼层，你敲的就是别人家的门。</p><p><strong>第四截 <code>/chat/completions</code> —— 找哪个柜台。</strong></p><p><code>chat</code> 是聊天，<code>completions</code> 是“接着往下写”。合起来就是“<strong>帮我把这段话说下去</strong>”的那个柜台。</p><p>同一栋楼里还有别的柜台：<code>/embeddings</code> 是“把文字变成一串数字”，<code>/images/generations</code> 是“画图”。<strong>地址里不带柜台，门卫不知道该把你领到哪儿。</strong></p><p>一句话记住：<strong>前面是寄到哪儿，后面是找谁办。</strong></p><h3 id="3-少一个字，包裹真的会绕地球三圈"><a href="#3-少一个字，包裹真的会绕地球三圈" class="headerlink" title="3. 少一个字，包裹真的会绕地球三圈"></a>3. 少一个字，包裹真的会绕地球三圈</h3><p>我知道“少一个字就送错门”听着像吓唬人。但它真的会发生，而且发生得特别频繁。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/v1/chat/completions      ← 对的</span><br><span class="line">/v1/chat/completion       ← 少了个 s，404</span><br><span class="line">/api/v1/chat/completions  ← 多了个 api，也 404</span><br><span class="line">https://api.example.com/   ← 结尾多个斜杠，有些家 404</span><br></pre></td></tr></table></figure><p><strong>你以为的小毛病，在对方看来是“我们这儿没这个柜台”。</strong></p><p>最坑的地方在于：<strong>它不会告诉你“地址写错了”。</strong> 它只会甩给你一个 404，或者一句 Not Found。新手看到这四个字，第一反应往往是“我 key 是不是有问题”——然后开始怀疑钥匙，其实钥匙一点毛病没有。</p><p>所以这条经验你现在就能记下：</p><blockquote><p><strong>报错先看是 4 开头的哪个数。404 是地址，401 是钥匙。</strong></p></blockquote><details class="folding-tag" green><summary> 想看看真实的门牌号长什么样？ </summary>              <div class='content'>              <p>前面那个 <code>api.example.com</code> 是我编的，专门用来举例——<strong>它不是任何一家公司，你也不用去访问它。</strong></p><p>真实世界里，几家常见的门牌大概是这样（只到“哪栋楼”这一层）：</p><table><thead><tr><th>谁家</th><th>门牌号（示意）</th></tr></thead><tbody><tr><td>OpenAI</td><td><code>https://api.openai.com/v1</code></td></tr><tr><td>DeepSeek</td><td><code>https://api.deepseek.com</code></td></tr><tr><td>阿里云百炼</td><td><code>https://dashscope.aliyuncs.com/compatible-mode/v1</code></td></tr><tr><td>智谱</td><td><code>https://open.bigmodel.cn/api/paas/v4</code></td></tr></tbody></table><p>看出来了吗？<strong>楼长得完全不一样，结构却一模一样</strong>：协议 ｜ 公司 ｜ 楼层 ｜ 柜台。</p><p>还有一行，是我觉得最有意思的：</p><blockquote><p>你在自己电脑上跑模型：<code>http://127.0.0.1:11434/v1</code></p></blockquote><p><code>127.0.0.1</code> 的意思是“<strong>这台电脑自己</strong>”。</p><p>对，这一次门就开在你自己屋里——<strong>所以它可以没有钥匙，也不花钱。</strong> 这是整套规则里唯一的例外，第三节会说为什么。</p><p>各家路径、版本号、要不要写 <code>/v1</code>，都<strong>以官方文档为准</strong>，别照抄这篇。</p>              </div>            </details><h2 id="三、钥匙：API-key-不是密码"><a href="#三、钥匙：API-key-不是密码" class="headerlink" title="三、钥匙：API key 不是密码"></a>三、钥匙：API key 不是密码</h2><h3 id="1-它长什么样"><a href="#1-它长什么样" class="headerlink" title="1. 它长什么样"></a>1. 它长什么样</h3><p>门牌讲完，看钥匙。</p><p>API key 一般长这样：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sk-8f3c1d7a92e04b6f8a1c5d3e7b9f2a4c</span><br></pre></td></tr></table></figure><p>一长串，看着像乱码。</p><p>几个你可能会注意到的细节：</p><ul><li><strong>前面总有个 <code>sk-</code>。</strong> 这是行业里的老习惯，sk &#x3D; secret key。有的公司后面还接 <code>proj-</code>、<code>ant-</code> 之类，那是“这把钥匙配给哪个项目用的”。</li><li><strong>长度各家不一样</strong>，三十几位到五十几位都有。</li><li><strong>它不是随便生成的。</strong> 前缀、长度、里面藏的标识，各家有各家的规矩。所以对方拿到这串，能查出“这钥匙谁发的、什么时候发的、用掉多少”。</li></ul><p><strong>但别被它那副乱码脸骗了——它不是密码。</strong></p><h3 id="2-密码证明“你是你”，它证明“你能用”，还记账"><a href="#2-密码证明“你是你”，它证明“你能用”，还记账" class="headerlink" title="2. 密码证明“你是你”，它证明“你能用”，还记账"></a>2. 密码证明“你是你”，它证明“你能用”，还记账</h3><p>这是这一节最重要的一句话：</p><blockquote><p><strong>密码回答的是“你是不是这个人”。</strong><br><strong>API key 回答的是“你有没有资格用、已经用了多少”。</strong></p></blockquote><p>听着像，其实差得远。</p><table><thead><tr><th></th><th>网站的密码</th><th>API key</th></tr></thead><tbody><tr><td>证明什么</td><td>你是你</td><td>你能用</td></tr><tr><td>谁在用</td><td>人</td><td>程序</td></tr><tr><td>用一次会怎样</td><td>没记录</td><td><strong>记一笔账</strong></td></tr><tr><td>能设过期吗</td><td>一般不能</td><td>可以</td></tr><tr><td>泄露了怎么办</td><td>改密码</td><td><strong>作废重发，旧的立刻失效</strong></td></tr></tbody></table><p>看最后一行——<strong>这是 key 比密码强的地方，也是很多人不知道的地方。</strong></p><p>钥匙丢了，你不用换锁。把那张卡注销，重新发一张，旧的那张当场作废。十秒钟的事，不用通知任何人。</p><p><strong>所以它更像一张门禁卡。</strong></p><p>刷一下，门开了，也记了一笔账。</p><p>公司前台能查到“这张卡今天刷了 37 次，都在下午两点到五点”——你的 AI 账单也一样，每一笔都记着花在哪个模型、哪个时间。</p><h3 id="3-顺手破一个最常见的误会"><a href="#3-顺手破一个最常见的误会" class="headerlink" title="3. 顺手破一个最常见的误会"></a>3. 顺手破一个最常见的误会</h3><p>讲 key 之前，得先把一个东西按住，不然后面全乱。</p><p><strong>很多人以为：我装了个 AI 软件，AI 就在我电脑里。</strong></p><p>不是。</p><p><strong>AI 根本不在你电脑里跑。</strong></p><p>你这台电脑，就算装了张挺好的显卡，也跑不动一个正经的大模型——那玩意儿是几百 GB 的“知识”，塞进你那 16G 内存里，连装都装不下。</p><p>真实情况是：</p><blockquote><p><strong>你只是打了个电话。</strong></p></blockquote><p>你按下发送，软件把你那句话打包，通过网络送到人家的机房，人家的显卡算完，再把结果送回来。</p><p>你电脑里那点算力，只够显示一个打字动画。</p><p>所以：</p><ul><li><strong>门牌号</strong> &#x3D; 电话号码，打给谁</li><li><strong>API key</strong> &#x3D; 电话卡，这通电话记在谁账上</li><li><strong>你电脑里的软件</strong> &#x3D; 话筒</li></ul><p><strong>这就是为什么必须联网。</strong> 断网了，钥匙再对、地址再准也没用——电话打不出去。</p><p>（折叠里那个 <code>127.0.0.1</code> 是唯一的例外：那是你给自己家装了一部内线电话，所以不用卡，也不花钱。）</p><h2 id="四、两样凑在一起，到底发生了什么"><a href="#四、两样凑在一起，到底发生了什么" class="headerlink" title="四、两样凑在一起，到底发生了什么"></a>四、两样凑在一起，到底发生了什么</h2><h3 id="1-跟着一封信走一趟"><a href="#1-跟着一封信走一趟" class="headerlink" title="1. 跟着一封信走一趟"></a>1. 跟着一封信走一趟</h3><p>前面都是拆开讲。现在装回去，看看你按下“发送”的那几秒钟，究竟发生了什么。</p><p>我们跟着一封信，走一遍：</p><div class="timeline  blue"><div class='timeline-item headline'><div class='timeline-item-title'><div class='item-circle'><p>一封信的旅程</p></div></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>一、把问题写成信</p></div></div><div class='timeline-item-content'><p>你打的字，被软件打包成一封信。</p><p>信里写的不是光秃秃一句话，而是：谁问的、问的什么、要什么格式的回答、要不要长一点。<strong>这些你一个字都没填，软件替你填了。</strong></p><p>这一步你永远不用管。</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>二、信封上写地址</p></div></div><div class='timeline-item-content'><p>把 base URL 写在信封上。</p><p>对应你设置页里<strong>上面那个框</strong>。</p><p><strong>地址错了，这封信在门口就被扔了，连拆都不会被拆。</strong></p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>三、信背面贴钥匙</p></div></div><div class='timeline-item-content'><p>把 API key 贴在信封背面。</p><p>对应你设置页里<strong>下面那个框</strong>。</p><p>注意：<strong>钥匙是贴在背面的，不是写进信纸里的。</strong> 这个区别很重要——收信的人看得见钥匙，可钥匙不会混进正文，也不会被当成内容念出来。</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>四、到了门口，先过门卫</p></div></div><div class='timeline-item-content'><p>信到了，门卫不急着拆。</p><p>他先问三句：</p><p><strong>这钥匙是真的吗？</strong> 假的、错的、作废的，退回。（这就是 401）</p><p><strong>这账户还有钱吗？</strong> 没了，退回。</p><p><strong>今天是不是刷得太猛？</strong> 太频繁了，退回。（这就是 429）</p><p><strong>三句全过，才拆信。</strong></p><p>拆开之后，钥匙被摘下来收好，信纸交给柜台后面那个模型。</p></div></div><div class='timeline-item'><div class='timeline-item-title'><div class='item-circle'><p>五、算完，原路寄回</p></div></div><div class='timeline-item-content'><p>模型读完信，一个字一个字往外写，写完打包，沿着原路送回来。</p><p>你屏幕上那个字一个个往外蹦的动画，就是这封信在路上走的样子。</p></div></div></div><h3 id="2-这里藏着一个让人安心的细节"><a href="#2-这里藏着一个让人安心的细节" class="headerlink" title="2. 这里藏着一个让人安心的细节"></a>2. 这里藏着一个让人安心的细节</h3><p>上一段我特意写了句“<strong>钥匙被摘下来收好，信纸交给模型</strong>”。</p><p>这句值得单独拎出来说。</p><p><strong>模型不知道你的钥匙。</strong></p><p>门卫看完就把钥匙收走了，模型见到的只有信纸。所以那个很多人偷偷担心的问题——</p><blockquote><p>“AI 会不会记住我的 key，哪天拿我的 key 去干别的？”</p></blockquote><p><strong>不会，它连见都没见过。</strong></p><p>（当然，<strong>发 key 的那家公司是见过的</strong>，它必须见，不然没法给你记账。所以“别把 key 交给来路不明的第三方”这句话依然成立。两件事不矛盾。）</p><h3 id="3-软件里那两个框，其实就是代码里这两行"><a href="#3-软件里那两个框，其实就是代码里这两行" class="headerlink" title="3. 软件里那两个框，其实就是代码里这两行"></a>3. 软件里那两个框，其实就是代码里这两行</h3><p>只用图形界面的朋友可以跳过这段。</p><p>但我还是想让你看一眼，因为<strong>看懂这一眼，那两个框就再也不会神秘了</strong>。</p><div class="tabs" id="两处填法"><ul class="nav-tabs"><button type="button" class="tab  active" data-href="两处填法-1">在软件里填</button><button type="button" class="tab " data-href="两处填法-2">在代码里填</button></ul><div class="tab-contents"><div class="tab-item-content active" id="两处填法-1"><p>你在某个 AI 客户端的设置页里，填的就是这两行：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">base URL    https://api.example.com/v1</span><br><span class="line">API Key     sk-8f3c1d7a92e04b6f8a1c5d3e7b9f2a4c</span><br></pre></td></tr></table></figure><p>点保存，软件自己会把它们塞进每一封信里。</p></div><div class="tab-item-content" id="两处填法-2"><p>同一件事，用代码写出来是这样：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> openai <span class="keyword">import</span> OpenAI</span><br><span class="line"></span><br><span class="line">client = OpenAI(</span><br><span class="line">    base_url=<span class="string">&quot;https://api.example.com/v1&quot;</span>,          <span class="comment"># ← 门牌号</span></span><br><span class="line">    api_key=<span class="string">&quot;sk-8f3c1d7a92e04b6f8a1c5d3e7b9f2a4c&quot;</span>,  <span class="comment"># ← 钥匙</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">resp = client.chat.completions.create(</span><br><span class="line">    model=<span class="string">&quot;某个模型的名字&quot;</span>,</span><br><span class="line">    messages=[&#123;<span class="string">&quot;role&quot;</span>: <span class="string">&quot;user&quot;</span>, <span class="string">&quot;content&quot;</span>: <span class="string">&quot;你好&quot;</span>&#125;],</span><br><span class="line">)</span><br><span class="line"><span class="built_in">print</span>(resp.choices[<span class="number">0</span>].message.content)</span><br></pre></td></tr></table></figure><p><strong>看那两个参数名：<code>base_url</code> 和 <code>api_key</code>。</strong></p><p>一模一样的两样东西，一个用手填，一个用代码填。</p></div></div><div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><p>所以以后不管在哪个软件、哪篇教程、哪份文档里看到这两个词，你都可以在心里翻译成：</p><p><strong>“填地址”和“填钥匙”。</strong></p><h2 id="五、四个坑，别让钱包替你交学费"><a href="#五、四个坑，别让钱包替你交学费" class="headerlink" title="五、四个坑，别让钱包替你交学费"></a>五、四个坑，别让钱包替你交学费</h2><p>原理懂了，说几个真会让人吃亏的。</p><h3 id="1-钥匙别乱给"><a href="#1-钥匙别乱给" class="headerlink" title="1. 钥匙别乱给"></a>1. 钥匙别乱给</h3><p><strong>它一泄露，别人刷的是你的卡。</strong></p><p>最常见的泄露方式不是被黑客偷，是<strong>你自己发出去的</strong>。</p><p>真实场景：程序报错了，你把截图甩进群里问“这什么情况”。截图里那串 <code>sk-</code> 开头的字，清清楚楚。</p><p><strong>那串字是活的。</strong> 谁复制走，谁就能用你的额度。</p><p>所以发图之前，养成一个习惯：</p><blockquote><p><strong>钥匙只露前 6 位、后 4 位，中间涂掉。</strong></p></blockquote><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sk-8f3c************************2a4c</span><br></pre></td></tr></table></figure><p>这样别人能帮你确认“是不是这把”，但拿不走。</p><h3 id="2-地址别写错"><a href="#2-地址别写错" class="headerlink" title="2. 地址别写错"></a>2. 地址别写错</h3><p><strong>少一截，直接 404。</strong></p><p>这条前面讲过了，只补一句实操：</p><p><strong>别凭记忆手打，复制粘贴。</strong></p><p>那串地址里有连字符、有斜杠、有版本号，手打十次能错三次，而且错了还看不出来——<code>completions</code> 和 <code>completion</code>，就差一个字母，肉眼几乎发现不了。</p><h3 id="3-别把钥匙写进网页里"><a href="#3-别把钥匙写进网页里" class="headerlink" title="3. 别把钥匙写进网页里"></a>3. 别把钥匙写进网页里</h3><p>这条最要命，也是新手最容易犯的。</p><p>如果你自己做了个网页，或者用某个“一键建站”工具搭了个 AI 聊天页，然后<strong>把 key 写在了网页代码里</strong>——</p><p>那等于把钥匙插在门上，还顺手把门敞开给全世界。</p><div class="note warning flat"><p><strong>为什么这么严重？</strong></p><p>网页的代码是<strong>下载到你浏览器里运行</strong>的。</p><p>任何人打开你的网页，按一下 F12，就能看见里面所有的东西——包括你写死的那把钥匙。</p><p>这不是“藏得深不深”的问题，是<strong>它一定会被下载到别人电脑上</strong>的问题。</p><p>正确做法：<strong>key 放在服务器上，让服务器替你去发这封信。</strong> 网页只跟你的服务器说话，永远不碰钥匙。</p><p>这也是为什么“做个 AI 网站”没想象中那么简单——<strong>不是难在页面，是难在这道墙。</strong></p></div><h3 id="4-别用共享的、来路不明的-key"><a href="#4-别用共享的、来路不明的-key" class="headerlink" title="4. 别用共享的、来路不明的 key"></a>4. 别用共享的、来路不明的 key</h3><p>网上总有人分享“免费 key”“公共 key”，或者拉你进个群说“用这个，随便刷”。</p><p>用之前先想一秒：</p><blockquote><p><strong>你发过去的每一句话，都要经过一台不属于你的机器。</strong></p></blockquote><p>你的问题、你贴进去的资料、你上传的文件，在那台机器上都是明文。</p><p>反过来也一样——<strong>那把钥匙是共用的，别人也能看见“共用这把钥匙的人”在问什么。</strong></p><p>（上一篇《为什么中转站提供的AI模型那么便宜？》讲过这类生意的底层逻辑，有空可以翻翻。核心就一句：<strong>你看不见的那一层，才是你要付的代价。</strong>）</p><h2 id="六、几个你一定会好奇的问题"><a href="#六、几个你一定会好奇的问题" class="headerlink" title="六、几个你一定会好奇的问题"></a>六、几个你一定会好奇的问题</h2><p><strong>问：我在网页版聊天，为什么从来不用填这两个框？</strong></p><p>答：<strong>因为那家公司替你填好了。</strong></p><p>网页版的钥匙存在人家自己的服务器上。你登录用的账号密码，证明的是“你是这个账号的主人”，跟 API key 是两码事——一个给<strong>人</strong>用，一个给<strong>程序</strong>用。</p><p><strong>问：那我要不要也去申请一把 key？</strong></p><p>答：<strong>看你干什么。</strong></p><p>只在网页上聊天，用不着。想让<strong>别的软件</strong>接上 AI（第三方客户端、各种插件、你自己写的小工具），就必须有一把。没它，那些软件没法证明“这次调用该记在谁账上”。</p><p><strong>问：免费的 key 和付费的 key，差在哪儿？</strong></p><p>答：<strong>同一把锁，额度不同。</strong></p><p>免费那把通常限速、限量、能用的模型少。够你试水，不够你干活。</p><p><strong>问：报错看不懂怎么办？</strong></p><p>答：记住四个数就行。</p><table><thead><tr><th>看到这个</th><th>多半是</th><th>先检查</th></tr></thead><tbody><tr><td><strong>401</strong></td><td>钥匙不对</td><td>key 有没有抄错、是不是已经作废</td></tr><tr><td><strong>404</strong></td><td>地址不对</td><td>base URL 有没有多字少字、结尾斜杠</td></tr><tr><td><strong>429</strong></td><td>用得太猛，或者没额度了</td><td>是不是刷太快；账户余额</td></tr><tr><td><strong>400</strong></td><td>信写得不对</td><td>模型名字写错、参数格式不对</td></tr></tbody></table><p>一条经验：<strong>先看第一个数字。</strong> 4 开头是“你这边有问题”，5 开头是“它那边有问题”。</p><p><strong>问：我明明填对了，为什么还是连不上？</strong></p><p>答：那可能跟这两个框都没关系。常见的三种：<strong>网络不通</strong>（有些厂商的接口在你所在地区直连不上）、<strong>代理没配好</strong>（软件走了代理，但代理不走这条路）、<strong>地址忘了带端口</strong>（本地跑的模型经常要写 <code>:11434</code> 这种端口）。</p><p>排查顺序：先用浏览器直接打开那个 base URL，看有没有返回东西。<strong>能打开，说明路是通的，问题在钥匙；打不开，问题在路上。</strong></p><p><strong>问：key 会过期吗？</strong></p><p>答：<strong>可以设，也可以随时手动作废。</strong></p><p>大部分平台都支持“给这把钥匙设个有效期”和“立刻注销”。建议<strong>每台设备、每个用途单独发一把，并且起个名字</strong>——哪天某台机器不用了，注销那一把就行，别的都不受影响。</p><h2 id="七、三件现在就能做的事"><a href="#七、三件现在就能做的事" class="headerlink" title="七、三件现在就能做的事"></a>七、三件现在就能做的事</h2><p>不用记太多，就三件。</p><p><strong>第一件：把钥匙存进该存的地方。</strong></p><p>别存微信收藏，别存桌面那个叫“新建文本文档.txt”的文件。</p><p>用密码管理器，或者至少用一个加密的笔记。<strong>如果某台电脑上某个软件要用它，那就存在那个软件的设置里，别再另存一份。</strong></p><p><strong>第二件：一把钥匙只干一件事。</strong></p><p>每台设备、每个用途单独发一把，起个能看懂的名字：</p><ul><li><code>家里的台式机</code></li><li><code>笔记本</code></li><li><code>那个报错的小工具</code></li></ul><p>哪天账单不对劲，名字一看就知道该注销哪一把。</p><p><strong>第三件：每个月看一眼用量。</strong></p><p>不是让你抠钱，是让你<strong>知道自己在花什么</strong>。</p><p>账单突然涨了一截，只有两种可能：你用得多了，或者<strong>有一把钥匙在你不认识的地方被用了</strong>。前者无所谓，后者越早发现越好。</p><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>好了，以上便是本期教学的所有内容了。</p><p>回头看，这篇文章其实只讲了一件事：</p><blockquote><p><strong>那两个框，一个是门牌，一个是钥匙。</strong></p></blockquote><p>想通这一件事，前面那些莫名其妙的现象就全对上了：</p><ul><li>为什么非要分成两个框（<strong>门牌能公开，钥匙不能</strong>）</li><li>为什么地址少一个字就 404（<strong>这栋楼没这个柜台</strong>）</li><li>为什么 key 不是密码（<strong>它不证明你是谁，它证明你能用，还记账</strong>）</li><li>为什么丢了 key 不用慌（<strong>作废重发，旧的当场失效，不用换锁</strong>）</li><li>为什么必须联网（<strong>AI 不在你电脑里，你只是打了个电话</strong>）</li><li>为什么不能写进网页（<strong>网页代码是下载到别人电脑上跑的</strong>）</li><li>为什么别用共享 key（<strong>你说的话要经过一台不属于你的机器</strong>）</li></ul><p>而门卫问的那三句，其实也可以套到你自己身上：</p><p><strong>钥匙对不对、钱够不够、用得猛不猛。</strong> 你遇到的绝大多数报错，都是这三句里有一句没过。</p><p>最后，还是那三个词：</p><table><thead><tr><th>词</th><th>填什么</th></tr></thead><tbody><tr><td><strong>地址</strong></td><td>base URL</td></tr><tr><td><strong>钥匙</strong></td><td>API key</td></tr><tr><td><strong>门</strong></td><td>门后面，才是那个能帮你干活的 AI</td></tr></tbody></table><hr><p>这几篇是连着的，按顺序看最顺：</p><p><strong>《什么是Token？》</strong> 讲 AI 怎么数你的字、怎么算你的钱；<br><strong>《Agent是怎么通过Token帮你干活的？》</strong> 讲 AI 怎么长出双手；<br><strong>《为什么中转站提供的AI模型那么便宜？》</strong> 讲你手里这把钥匙，是从哪儿来的；<br><strong>这一篇</strong>，讲的是<strong>你怎么进门</strong>。</p><p>四篇连起来，一个完整的“AI 是怎么被你用上的”，就齐了。</p><hr><blockquote><p><strong>本文数据说明</strong></p><p>文中 <code>api.example.com</code> 是<strong>举例用的假地址</strong>，不指向任何真实服务；<code>sk-8f3c1d7a…</code> 那串 key 也是<strong>编的</strong>，全文没有出现任何一个真实密钥。</p><p><code>sk-</code> 前缀是行业里常见的写法，不是硬性规定，各家规则不同。key 的真实长度、能不能设过期、作废后是否立即失效，<strong>以各家官方文档为准</strong>。</p><p>折叠里那几家厂商的门牌号，是<strong>写作时公开文档里的示意值</strong>，路径、版本号、要不要写 <code>/v1</code> 都可能变，<strong>别照抄，以官方当期文档为准</strong>。</p><p>401 &#x2F; 404 &#x2F; 429 &#x2F; 400 是 HTTP 的标准状态码，多数厂商遵循，但“余额不足”具体报哪个码各家不一样，有的报 429，有的报 402。<strong>看报错内容，别只看数字。</strong></p><p>代码示例里的 <code>model=&quot;某个模型的名字&quot;</code> 需要换成各家真实的模型名，直接运行是跑不通的。</p></blockquote><p>最后，不要忘了<strong>关注</strong>慧妈，<strong>收藏</strong>此博客，我会在这上面更新更多教学内容。你们的<strong>关注</strong>与<strong>打赏</strong>是慧妈更新的<strong>最大动力</strong>😊</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI入门教学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教学 </tag>
+            
+            <tag> AI </tag>
+            
+            <tag> 小白必看 </tag>
+            
+            <tag> 干货满满 </tag>
+            
+            <tag> 持续更新 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>为什么中转站提供的AI模型那么便宜？</title>
       <link href="/%E6%96%87%E7%AB%A0/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%AD%E8%BD%AC%E7%AB%99%E6%8F%90%E4%BE%9B%E7%9A%84AI%E6%A8%A1%E5%9E%8B%E9%82%A3%E4%B9%88%E4%BE%BF%E5%AE%9C%EF%BC%9F/"/>
       <url>/%E6%96%87%E7%AB%A0/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%AD%E8%BD%AC%E7%AB%99%E6%8F%90%E4%BE%9B%E7%9A%84AI%E6%A8%A1%E5%9E%8B%E9%82%A3%E4%B9%88%E4%BE%BF%E5%AE%9C%EF%BC%9F/</url>
@@ -13,7 +46,7 @@
       
       <categories>
           
-          <category> 教学内容 </category>
+          <category> AI入门教学 </category>
           
       </categories>
       
@@ -22,13 +55,13 @@
             
             <tag> 教学 </tag>
             
-            <tag> 持续更新 </tag>
-            
             <tag> AI </tag>
             
             <tag> 小白必看 </tag>
             
             <tag> 干货满满 </tag>
+            
+            <tag> 持续更新 </tag>
             
         </tags>
       
@@ -46,7 +79,7 @@
       
       <categories>
           
-          <category> 教学内容 </category>
+          <category> AI入门教学 </category>
           
       </categories>
       
@@ -55,13 +88,13 @@
             
             <tag> 教学 </tag>
             
-            <tag> 持续更新 </tag>
-            
             <tag> AI </tag>
             
             <tag> 小白必看 </tag>
             
             <tag> 干货满满 </tag>
+            
+            <tag> 持续更新 </tag>
             
         </tags>
       
@@ -79,7 +112,7 @@
       
       <categories>
           
-          <category> 教学内容 </category>
+          <category> AI入门教学 </category>
           
       </categories>
       
@@ -88,13 +121,13 @@
             
             <tag> 教学 </tag>
             
-            <tag> 持续更新 </tag>
-            
             <tag> AI </tag>
             
             <tag> 小白必看 </tag>
             
             <tag> 干货满满 </tag>
+            
+            <tag> 持续更新 </tag>
             
         </tags>
       
@@ -121,11 +154,11 @@
             
             <tag> 教学 </tag>
             
-            <tag> 持续更新 </tag>
-            
             <tag> 小白必看 </tag>
             
             <tag> 干货满满 </tag>
+            
+            <tag> 持续更新 </tag>
             
             <tag> 网络知识 </tag>
             
@@ -154,11 +187,11 @@
             
             <tag> 教学 </tag>
             
-            <tag> 持续更新 </tag>
-            
             <tag> 小白必看 </tag>
             
             <tag> 干货满满 </tag>
+            
+            <tag> 持续更新 </tag>
             
         </tags>
       
@@ -185,11 +218,11 @@
             
             <tag> 教学 </tag>
             
-            <tag> 持续更新 </tag>
-            
             <tag> 小白必看 </tag>
             
             <tag> 干货满满 </tag>
+            
+            <tag> 持续更新 </tag>
             
         </tags>
       
@@ -249,11 +282,11 @@
             
             <tag> 教学 </tag>
             
-            <tag> 持续更新 </tag>
-            
             <tag> 小白必看 </tag>
             
             <tag> 干货满满 </tag>
+            
+            <tag> 持续更新 </tag>
             
             <tag> 装机必备 </tag>
             
@@ -280,11 +313,11 @@
       
         <tags>
             
-            <tag> 软件下载 </tag>
-            
             <tag> 教学 </tag>
             
             <tag> 持续更新 </tag>
+            
+            <tag> 软件下载 </tag>
             
             <tag> 安全上网 </tag>
             
@@ -311,13 +344,13 @@
       
         <tags>
             
-            <tag> 软件下载 </tag>
-            
-            <tag> 常用工具 </tag>
-            
             <tag> 教学 </tag>
             
             <tag> 持续更新 </tag>
+            
+            <tag> 软件下载 </tag>
+            
+            <tag> 常用工具 </tag>
             
         </tags>
       
@@ -342,11 +375,11 @@
       
         <tags>
             
+            <tag> 持续更新 </tag>
+            
             <tag> 软件下载 </tag>
             
             <tag> 常用工具 </tag>
-            
-            <tag> 持续更新 </tag>
             
             <tag> 安全上网 </tag>
             
